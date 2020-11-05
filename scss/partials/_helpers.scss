@@ -1,0 +1,13 @@
+// Hiding Visually
+
+.hide-visually {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+.headline {font-size: 13vw;}
+
+.headline.clamp {
+    font-size: clamp(1.5em, 10vw, 6em);
+}

@@ -1,0 +1,79 @@
+// TYPE
+
+body {
+    font-family: $type-body;
+    // max-width: $type-linewidth;
+    font-weight: 200;
+    font-size: 100%;
+    line-height: 1.5;
+    color: $type-color;
+}
+
+h1, h2, h3 {
+    font-family: $type-heading;
+    margin: .5em 0;
+    max-width: $type-linewidth;
+    font-weight: 400;
+}
+
+span {font-weight: 900;}
+
+.blue-type {color: $blue;}
+.turq-type {color: $turq;}
+
+h4, h5 {
+    font-family: $type-heading;
+    font-weight: 700;
+    color: $blue;
+}
+
+h1 {font-size: 6.75em; line-height: .9em;}
+
+h2 {font-size: 4.5em; line-height: 1.1em;}
+
+h3 {font-size: 3em; line-height: 1.2em;}
+
+h4 {font-size: 2.25em; line-height: .25em; text-transform: lowercase;}
+
+h5 {font-size: 2em; line-height: 1.4em;}
+
+p {
+    margin: 0 0 .5em .25em;
+    max-width: $type-linewidth;
+    font-size: 1em;
+}
+
+.big-p {
+    margin: 0 0 .5em .25em;
+    max-width: $type-linewidth;
+    font-size: 1.3em;
+}
+
+// Horizontal Rule
+hr {
+    border:0;
+    height: 1px;
+    margin: 3em 0;
+    background: rgba(0,0,0,.1);
+}
+
+.text-centered {
+    text-align: center;
+    * {margin-left: auto; margin-right: auto;}
+}
+
+.subheadline {
+    margin-bottom: 1.5em;
+}
+
+.sectionhead {
+    font-family: $type-body;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: $turq;
+    font-size: 1em;
+    margin: 1em auto;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.2em;
+}

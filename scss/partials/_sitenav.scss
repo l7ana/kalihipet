@@ -1,0 +1,83 @@
+.site-header .site-nav {
+    .menu-button {
+        top: .5em;
+        right: .75em;
+        color: $blue;
+        font-size: 1.5em;
+        z-index: 20;
+        position: relative;
+        cursor: pointer;
+        &::after {
+            content: "";
+            line-height: 1;
+            text-align: center;
+            display: inline-block;
+            font-size: 1.5em;
+            background-image: url(../img/paw.svg);
+            background-size: contain;
+            width: 1.25em;
+            height: 1.25em;
+            transform: rotate(0deg);
+            transition: .2s all ease-out;
+            }
+    }
+
+    svg {fill:$blue-lt;}
+    
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color: $blue-lt;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translate(100%,0);
+        transition:all .3s ease-out;
+        z-index: 1;
+    }
+    li {
+        font-size: 4vw;
+        min-width: 20vw;
+    }
+    &[data-navstate="open"] {
+        .menu-button:after {
+                content: "";
+            line-height: 1;
+            text-align: center;
+            display: inline-block;
+            font-size: 1.5em;
+            background-image: url(../img/x-02.svg);
+            background-size: contain;
+            width: 1.25em;
+            height: 1.25em;
+            transform: rotate(90deg);
+            transition: .2s all ease-out;
+            z-index: 2;
+            position: relative;
+        }
+        ul {
+          transform: translate(0,0);
+        }
+    }
+}
+
+.site-footer .site-nav {
+    ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    a {
+        display: block;
+        padding: 1em;
+        color: $blue;
+    }
+}
