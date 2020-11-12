@@ -55,7 +55,8 @@ section {
 
 .hero {
     padding: 5em 0;
-    background:$yellow-lt;
+    background-image: url(../../img/YellowPath211.svg);
+    background-repeat: no-repeat;
     min-height: 100vh;
     display: grid;
     place-items: center;
