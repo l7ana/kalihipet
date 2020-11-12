@@ -9,13 +9,12 @@
     <link rel="stylesheet" href="https://use.typekit.net/wio0qsb.css">
 
 </head>
-
 <body>
 
     <header class="site-header" id="top">
         <div class="site-identity">
             <div class="logo">
-               <a href="index.html"> <img src="img/kpclogo_hor.png" alt="kpc horizontal logo"></a>
+               <a href="index.html"> <img src="img/logos/KPC-hor.png" alt="kpc horizontal logo"></a>
                <h3 class="hide-visually">KPC v1</h3>
             </div>
         </div>
@@ -29,7 +28,7 @@
             </ul>
         </nav>
     </header>
-<main>
+<main class="site-main">
 
     <section class="hero animate-on-scroll">
         <div class="container">
@@ -50,66 +49,48 @@
         </div>
     </section>
 
-    <section>
-        <div class="container">
-            <h4 class="text-centered">who are you shopping for?</h4>
-        <div class="icons"><img src="img/icons/aquav2.png" alt="aquatic life"><img src="img/icons/birdv2.png" alt="avian"><img src="img/icons/catv2.png" alt="cat"><img src="img/icons/dogv2.png" alt="dog"><img src="img/icons/reptilev2.png" alt="reptiles"><img src="img/icons/mousev2.png" alt="small animals"></div>
-        </div>  
-    </section>
-
     <section id="section1" class="animate-on-scroll">
-        <div class="container">
-            <h2 class="sectionhead">Section 1</h2>
-            <div class="row">
-                <div class="one-half column">
-                    <img src="https://picsum.photos/g/1600/?random" alt="placeholder" />
-                </div>
-                <div class="one-half column">
-                    <h3>Right Column</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ad a itaque pariatur, necessitatibus ab ut ratione sed voluptate perferendis laborum, minima neque! Illo repellat nulla quis pariatur ipsum atque repellendus id magni culpa facilis.</p>
-                    <a href="" class="button">button</a>
-                </div>
-            </div>
-    </section>
-    <section id="section2" class="animate-on-scroll"> 
-        <div class="container">
-            <h2 class="sectionhead">Section 2</h2>
+    <div class="container">
+        <h4 class="text-centered">who are you shopping for?</h4>
+        <div class="icons"><img src="img/icons/aquav2.png" alt="aquatic life"><img src="img/icons/birdv2.png" alt="avian"><img src="img/icons/catv2.png" alt="cat"><img src="img/icons/dogv2.png" alt="dog"><img src="img/icons/reptilev2.png" alt="reptiles"><img src="img/icons/mousev2.png" alt="small animals"></div>
         <div class="row swapped">
-        <div class="one-half column animate-scale-in">
-            <img src="https://picsum.photos/g/1601/?random" alt="placeholder"/>
-        </div>
-        <div class="one-half column animate-drop-in-delay">
-            <h3>Left Column</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa, vero inventore! Quia, quaerat id, maiores, dolorem maxime cum consectetur consequatur magnam eligendi quod obcaecati nisi doloribus rem praesentium modi laudantium ex aliquam dignissimos natus earum.</p>
-            <a href="" class="button alt">button</a>
+            <div class="column one-half">
+                <h2 class="sectionhead">Create an Account to</24>
+                <h3><span class="blue-type">Provide</span>  for Your Pet <span class="blue-type">Seamlessly</span></h3>
+                <p>Schedule product refills shipped to you.
+                    Add favorite products to your watchlist.
+                    Receive updates on restocking.</p>
+                    <a href="" class="button alt">Sign Up</a>
+            </div>
+            <div class="column one-half">
+                <img src="img/ani/hamrun.gif" alt="hamster on wheel">
             </div>
         </div>
+        <div class="row">
+            <div class="column one-half">
+                <h3><span class="blue-type">Friends</span> Awaiting A <span class="turq-type">Forever Home</span></h3>
+                <p>We carry a diverse breed of animals from only reputable local breeders and homes. Additionally, each animal received is immediately cared for at expert veterinarians before they are available for sale. That way, you can feel confident knowing your future furry, reptilian, or feathered friend has been cared for and is healthy.</p>
+                <a href="" class="button">Adopt</a><a href="" class="button alt">FAQ</a>
+            </div>
+            <div class="column one-half">
+                instagram grid
+            </div>
         </div>
+    </div>  
     </section>
 
-    <section id="section3" class="animate-on-scroll">
-        <h3 class="sectionhead">Section 4</h3>
-        <div class="container">
-            <div class="row stacked">
-                <div class="one-half column centered  animate-scale-in">
-                    <img src="https://picsum.photos/g/1602/?random" alt="placeholder">
-                </div>
-                <div class="one-half column centered animate-slide-up">
-                    <h3>Center Column</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam ratione, perferendis aliquid eum quos obcaecati ea! Quasi odit, similique recusandae at facilis necessitatibus quod iste quisquam ducimus nobis, adipisci saepe.</p>
-                    <a href="" class="button">button</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
+    <section class="animate-on-scroll">
         <div class="pawprints">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+          <div>paw</div>
+          <div>paw</div>
+          <div>paw</div>
+          <div>paw</div>
+          <div>paw</div>
         </div>
+      </section>
+      <section>
+          <h1>Canvas</h1>
+          <canvas id="canvas"></canvas>
       </section>
         
 </main>
@@ -124,7 +105,7 @@
     </nav>
 </footer>
 
-    <!-- SMOOTH SCROLL BY CHRIS FERDINANDI https://github.com/cferdinandi/smooth-scroll -->
+<!-- SMOOTH SCROLL BY CHRIS FERDINANDI https://github.com/cferdinandi/smooth-scroll -->
     <script src="js/smooth-scroll.polyfills.min.js"></script>
     <script>
         var scroll = new SmoothScroll('a[href*="#"]', {
@@ -132,6 +113,13 @@
             speedAsDuration: true
         });
     </script>
+<!-- rough.js -->
+<script src="js/rough.min.js"></script>
+<script>
+    const rc = rough.canvas(document.getElementById('canvas'));
+rc.rectangle(10, 10, 200, 200); // x, y, width, height
+</script>
+
 <!-- Main JS -->
 <script src="js/script.js"></script>
 

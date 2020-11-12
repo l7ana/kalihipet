@@ -33,13 +33,22 @@
 }
 
 #section1 {
+    h4
+    .icons
     // First column
     .one-half:nth-child(1) {
         transition: all .7s ease-out;
         transform: translate(-50px,0);
     }
+    .one-half:nth-child(2) {
+        transition: all .7s ease-out;
+        transform: translate(-50px,0);
+    }
     &[data-sectionstate="active"] {
         .one-half:nth-child(1) {
+            transform: translate(0,0);
+        }
+        .one-half:nth-child(2) {
             transform: translate(0,0);
         }
     }
@@ -69,7 +78,7 @@
 }
 
 // PawPrints
-section .pawprints {
+.pawprints {
     position: absolute;
     top: -100px;
   
@@ -98,8 +107,6 @@ section .pawprints {
       }
     }
   }
-  
-  
   
   section[data-sectionstate="active"] .pawprints {
     div {

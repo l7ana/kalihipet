@@ -55,6 +55,7 @@ header, footer, aside, nav, main, figure, section, article {
 
 .headline.clamp {
   font-size: clamp(1.5em, 10vw, 6em);
+  margin: 0 0 0.25em 0;
 }
 
 body {
@@ -106,14 +107,9 @@ h3 {
 }
 
 h4 {
-  font-size: 2.25em;
-  line-height: 0.25em;
-  text-transform: lowercase;
-}
-
-h5 {
   font-size: 2em;
-  line-height: 1.4em;
+  text-transform: lowercase;
+  margin: 0.25em 0;
 }
 
 p {
@@ -156,6 +152,7 @@ hr {
   margin: 1em auto;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+  margin: 0em;
 }
 
 .site-header .site-nav .menu-button {
@@ -282,6 +279,7 @@ img {
 .icons {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
 }
 .icons img {
@@ -395,6 +393,7 @@ body {
 
 .logo {
   max-width: 170px;
+  margin: 10px;
 }
 
 .site-footer {
@@ -425,15 +424,20 @@ body {
   justify-content: center;
 }
 
+.site-main {
+  overflow-x: hidden;
+}
+
 section {
-  padding: 3em 0;
+  padding: 1em 0;
   min-height: 100vh;
   align-items: center;
+  position: relative;
 }
 
 .hero {
   padding: 5em 0;
-  background-image: url(../../img/YellowPath211.svg);
+  background-image: url(../../img/blocks/YellowPath211.svg);
   background-repeat: no-repeat;
   min-height: 100vh;
   display: grid;
@@ -469,11 +473,18 @@ section {
   transform: translate(0, 0);
 }
 
-#section1 .one-half:nth-child(1) {
+#section1 h4 .icons .one-half:nth-child(1) {
+  transition: all 0.7s ease-out;
+  transform: translate(-50px, 0);
+}
+#section1 .one-half:nth-child(2) {
   transition: all 0.7s ease-out;
   transform: translate(-50px, 0);
 }
 #section1[data-sectionstate=active] .one-half:nth-child(1) {
+  transform: translate(0, 0);
+}
+#section1[data-sectionstate=active] .one-half:nth-child(2) {
   transform: translate(0, 0);
 }
 #section1 .one-half:nth-child(2) {
@@ -492,11 +503,11 @@ section {
   transform: translate(0, 0);
 }
 
-section .pawprints {
+.pawprints {
   position: absolute;
   top: -100px;
 }
-section .pawprints div {
+.pawprints div {
   background: red;
   width: 50px;
   height: 50px;
@@ -504,19 +515,19 @@ section .pawprints div {
   transition: all ease-out 0.25s;
   opacity: 0;
 }
-section .pawprints div:nth-child(1) {
+.pawprints div:nth-child(1) {
   transform: translate(100px, 0) rotate(45deg);
 }
-section .pawprints div:nth-child(2) {
+.pawprints div:nth-child(2) {
   transform: translate(80px, 0) rotate(35deg);
 }
-section .pawprints div:nth-child(3) {
+.pawprints div:nth-child(3) {
   transform: translate(20px, -20px) rotate(35deg);
 }
-section .pawprints div:nth-child(4) {
+.pawprints div:nth-child(4) {
   transform: translate(50px, -20px) rotate(45deg);
 }
-section .pawprints div:nth-child(5) {
+.pawprints div:nth-child(5) {
   transform: translate(-10px, -40px) rotate(25deg);
 }
 

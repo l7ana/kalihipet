@@ -33,9 +33,7 @@ h2 {font-size: 4.5em; line-height: 1.1em;}
 
 h3 {font-size: 3em; line-height: 1.2em;}
 
-h4 {font-size: 2.25em; line-height: .25em; text-transform: lowercase;}
-
-h5 {font-size: 2em; line-height: 1.4em;}
+h4 {font-size: 2em; text-transform: lowercase; margin: .25em 0;}
 
 p {
     margin: 0 0 .5em .25em;
@@ -75,4 +73,5 @@ hr {
     margin: 1em auto;
     text-transform: uppercase;
     letter-spacing: 0.2em;
+    margin: 0em;
 }
