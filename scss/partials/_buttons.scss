@@ -35,3 +35,17 @@ a.button.alt {
         background-image: url(../img/buttons/pink_round_4.png);
     }
 }
+
+.link-with-arrow {
+    display: flex;
+    text-decoration: underline $yellow-dk solid;
+    &::after {
+    content: "";
+    background-image: url(../img/buttons/60x40_pink_arrow_1.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 40px;
+    width: 96px;
+    margin-top: 13px;
+    }
+}

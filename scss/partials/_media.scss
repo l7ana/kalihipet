@@ -3,12 +3,19 @@ img {
     height: auto;
 }
 
-.icons{
+.animal-icons{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 5em;
     img {
         padding-right: 10px;
     }
+}
+
+.icons {
+    display: inline-block;
+    max-width: 17px;
+    margin-right: 10px;
 }

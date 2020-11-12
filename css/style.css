@@ -223,12 +223,13 @@ hr {
 
 .site-footer .site-nav ul {
   display: flex;
+  flex-direction: column;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 .site-footer .site-nav a {
-  display: block;
+  display: inline-block;
   padding: 1em;
   color: #0488A6;
 }
@@ -271,19 +272,41 @@ a.button.alt:hover {
   background-image: url(../img/buttons/pink_round_4.png);
 }
 
+.link-with-arrow {
+  display: flex;
+  -webkit-text-decoration: underline #D9CF2A solid;
+          text-decoration: underline #D9CF2A solid;
+}
+.link-with-arrow::after {
+  content: "";
+  background-image: url(../img/buttons/60x40_pink_arrow_1.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 40px;
+  width: 96px;
+  margin-top: 13px;
+}
+
 img {
   max-width: 100%;
   height: auto;
 }
 
-.icons {
+.animal-icons {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 5em;
 }
-.icons img {
+.animal-icons img {
   padding-right: 10px;
+}
+
+.icons {
+  display: inline-block;
+  max-width: 17px;
+  margin-right: 10px;
 }
 
 * {
@@ -329,7 +352,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: left;
 }
 .row.swapped {
   flex-direction: row-reverse;
@@ -351,6 +374,9 @@ body {
   }
   .row > .column.one-third {
     width: 32.3333%;
+  }
+  .row > .column.one-fifth {
+    width: 19%;
   }
   .row > .column.two-thirds {
     width: 65.6666%;
@@ -398,6 +424,8 @@ body {
 
 .site-footer {
   background-color: #fdfac6;
+  display: flex;
+  justify-content: center;
 }
 
 .site-header {
@@ -419,11 +447,6 @@ body {
   padding: 0.5em;
 }
 
-.site-footer {
-  display: flex;
-  justify-content: center;
-}
-
 .site-main {
   overflow-x: hidden;
 }
@@ -440,6 +463,13 @@ section {
   background-image: url(../../img/blocks/YellowPath211.svg);
   background-repeat: no-repeat;
   min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+#section1 {
+  background-image: url(../../img/blocks/BluePath214.svg);
+  background-repeat: no-repeat;
   display: grid;
   place-items: center;
 }
@@ -473,7 +503,7 @@ section {
   transform: translate(0, 0);
 }
 
-#section1 h4 .icons .one-half:nth-child(1) {
+#section1 .one-half:nth-child(1) {
   transition: all 0.7s ease-out;
   transform: translate(-50px, 0);
 }

@@ -17,7 +17,11 @@
     margin: 10px;
 }
 
-.site-footer {background-color: $yellow-lt;}
+.site-footer {
+    background-color: $yellow-lt;
+    display: flex;
+    justify-content: center;
+}
 
 .site-header {
     display: flex;
@@ -41,11 +45,6 @@
     }
 }
 
-.site-footer {
-    display: flex;
-    justify-content: center;
-}
-
 .site-main {overflow-x: hidden;}
 
 // SECTIONS
@@ -62,6 +61,13 @@ section {
     background-image: url(../../img/blocks/YellowPath211.svg);
     background-repeat: no-repeat;
     min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+#section1 {
+    background-image: url(../../img/blocks/BluePath214.svg);
+    background-repeat: no-repeat;
     display: grid;
     place-items: center;
 }

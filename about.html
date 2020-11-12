@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <meta name="description" content="KPC v1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/wio0qsb.css">
+
+</head>
+<body>
+    <header></header>
+    <main>
+        <section class="animate-on-scroll">
+            <div class="pawprints">
+              <div>paw</div>
+              <div>paw</div>
+              <div>paw</div>
+              <div>paw</div>
+              <div>paw</div>
+            </div>
+          </section>
+          <section>
+              <h1>Canvas</h1>
+              <canvas id="canvas"></canvas>
+          </section>
+    </main>
+    <footer></footer>
+</body>
+
+<!-- SMOOTH SCROLL BY CHRIS FERDINANDI https://github.com/cferdinandi/smooth-scroll -->
+<script src="js/smooth-scroll.polyfills.min.js"></script>
+<script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 800,
+        speedAsDuration: true
+    });
+</script>
+<!-- rough.js -->
+<script src="js/rough.min.js"></script>
+<script>
+const rc = rough.canvas(document.getElementById('canvas'));
+rc.rectangle(10, 10, 200, 200); // x, y, width, height
+</script>
+
+<!-- Main JS -->
+<script src="js/script.js"></script>
