@@ -5,11 +5,10 @@
     align-items: center;
 }
 
-.site-header,
-.site-footer {
+.site-header {
     padding: 0.5em;
     width: 100%;
-    a {color: $blue; text-decoration: none;}
+    a {color: $blue;}
 }
 
 .logo {
@@ -18,9 +17,10 @@
 }
 
 .site-footer {
-    background-color: $yellow-lt;
+    background-color: $yellow-lter;
     display: flex;
     justify-content: center;
+    padding: 3em 0 3em 0;
     .container {position: relative;}
 }
 

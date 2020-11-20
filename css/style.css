@@ -85,10 +85,13 @@ span {
   color: #5BCBBC;
 }
 
-h4, h5 {
+h4 {
   font-family: "aesthet-nova", serif;
   font-weight: 700;
   color: #0488A6;
+  font-size: 2em;
+  text-transform: lowercase;
+  margin: 0.25em 0;
 }
 
 h1 {
@@ -104,12 +107,6 @@ h2 {
 h3 {
   font-size: 3em;
   line-height: 1.2em;
-}
-
-h4 {
-  font-size: 2em;
-  text-transform: lowercase;
-  margin: 0.25em 0;
 }
 
 p {
@@ -153,6 +150,10 @@ hr {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   margin: 0em;
+}
+
+address {
+  font-style: normal;
 }
 
 .site-header .site-nav .menu-button {
@@ -221,17 +222,18 @@ hr {
   transform: translate(0, 0);
 }
 
-.site-footer .site-nav ul {
-  display: flex;
-  flex-direction: column;
+.footer-nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.site-footer .site-nav a {
-  display: inline-block;
-  padding: 1em;
+.footer-nav a {
   color: #0488A6;
+  font-family: "aesthet-nova", serif;
+  font-size: 1em;
+  font-weight: 700;
+  -webkit-text-decoration: underline #D9CF2A solid;
+          text-decoration: underline #D9CF2A solid;
 }
 
 button {
@@ -312,7 +314,7 @@ img {
 .icon-list {
   list-style: none;
   margin: 0;
-  padding: 0 0 0 27px;
+  padding: 0 0 0 30px;
 }
 .icon-list li {
   position: relative;
@@ -328,6 +330,13 @@ img {
   top: 3px;
 }
 
+.map {
+  position: relative;
+}
+.map img {
+  margin-top: -10%;
+}
+
 .footer-logo {
   display: none;
 }
@@ -338,6 +347,7 @@ img {
     position: absolute;
     max-width: 130px;
     left: calc(4% - 130px);
+    text-align: center;
   }
 }
 * {
@@ -386,6 +396,9 @@ body {
     column-gap: 1.45%;
   }
 
+  .row-grid > .column-grid.col-start-1 {
+    grid-column-start: 1;
+  }
   .row-grid > .column-grid.col-start-2 {
     grid-column-start: 2;
   }
@@ -511,15 +524,12 @@ body {
   align-items: center;
 }
 
-.site-header,
-.site-footer {
+.site-header {
   padding: 0.5em;
   width: 100%;
 }
-.site-header a,
-.site-footer a {
+.site-header a {
   color: #0488A6;
-  text-decoration: none;
 }
 
 .logo {
@@ -528,9 +538,10 @@ body {
 }
 
 .site-footer {
-  background-color: #fdfac6;
+  background-color: #fffee7;
   display: flex;
   justify-content: center;
+  padding: 3em 0 3em 0;
 }
 .site-footer .container {
   position: relative;

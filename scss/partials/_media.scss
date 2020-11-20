@@ -23,7 +23,7 @@ img {
 .icon-list {
     list-style: none;
     margin: 0;
-    padding: 0 0 0 27px;
+    padding: 0 0 0 30px;
     li {
         position: relative;
         margin: 0;
@@ -37,6 +37,13 @@ img {
     }
 }
 
+.map {
+    position: relative;
+    img {
+        margin-top: -10%;
+    }
+}
+
 .footer-logo {
     display: none;
 }
@@ -47,5 +54,6 @@ img {
         position: absolute;
         max-width: 130px;
         left: calc(4% - 130px);
+        text-align: center;
     }
 }

@@ -21,10 +21,13 @@ span {font-weight: 900;}
 .blue-type {color: $blue;}
 .turq-type {color: $turq;}
 
-h4, h5 {
+h4 {
     font-family: $type-heading;
     font-weight: 700;
     color: $blue;
+    font-size: 2em; 
+    text-transform: lowercase; 
+    margin: .25em 0;
 }
 
 h1 {font-size: 6.75em; line-height: .9em;}
@@ -32,8 +35,6 @@ h1 {font-size: 6.75em; line-height: .9em;}
 h2 {font-size: 4.5em; line-height: 1.1em;}
 
 h3 {font-size: 3em; line-height: 1.2em;}
-
-h4 {font-size: 2em; text-transform: lowercase; margin: .25em 0;}
 
 p {
     margin: 0 0 .5em .25em;
@@ -75,3 +76,5 @@ hr {
     letter-spacing: 0.2em;
     margin: 0em;
 }
+
+address {font-style: normal;}
