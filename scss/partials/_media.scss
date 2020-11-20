@@ -37,23 +37,37 @@ img {
     }
 }
 
-.map {
-    position: relative;
-    img {
-        margin-top: -10%;
-    }
-}
-
 .footer-logo {
     display: none;
 }
 
+#mango {
+    position: absolute;
+    max-width: 250px;
+    left: 46%;
+    bottom: 95%;
+    transform: rotate(2deg);
+}
+
+.map {margin: 1em 0;}
+
 @media (min-width: $breakpoint-large) {
+    .map {
+        position: relative;
+        img { margin-top: -10%;}
+        }
     .footer-logo {
         display: block;
         position: absolute;
         max-width: 130px;
         left: calc(4% - 130px);
         text-align: center;
+    }
+    #mango {
+        position: absolute;
+        max-width: 460px;
+        left: 72%;
+        bottom: 70%;
+        transform: rotate(2deg);
     }
 }

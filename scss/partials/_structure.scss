@@ -16,14 +16,6 @@
     margin: 10px;
 }
 
-.site-footer {
-    background-color: $yellow-lter;
-    display: flex;
-    justify-content: center;
-    padding: 3em 0 3em 0;
-    .container {position: relative;}
-}
-
 .site-header {
     display: flex;
     flex-wrap: wrap;
@@ -48,6 +40,14 @@
 
 .site-main {overflow-x: hidden;}
 
+.site-footer {
+    background-color: $yellow-lter;
+    display: flex;
+    justify-content: center;
+    padding: 2em 0 3em 0;
+    .container {position: relative;}
+}
+
 // SECTIONS
 
 section {
@@ -71,4 +71,13 @@ section {
     background-repeat: no-repeat;
     display: grid;
     place-items: center;
+}
+
+#section2 {
+    background-image: url(../img/blocks/BluePath215.svg);
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+    padding-top: 10em;
+    margin-bottom: 3em;
 }
