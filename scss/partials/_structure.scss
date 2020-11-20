@@ -21,6 +21,7 @@
     background-color: $yellow-lt;
     display: flex;
     justify-content: center;
+    .container {position: relative;}
 }
 
 .site-header {

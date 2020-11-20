@@ -19,3 +19,33 @@ img {
     max-width: 17px;
     margin-right: 10px;
 }
+
+.icon-list {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 27px;
+    li {
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+    address {display: inline-block;}
+    .icons {
+        position: absolute;
+        left: -24px;
+        top: 3px;
+    }
+}
+
+.footer-logo {
+    display: none;
+}
+
+@media (min-width: $breakpoint-large) {
+    .footer-logo {
+        display: block;
+        position: absolute;
+        max-width: 130px;
+        left: calc(4% - 130px);
+    }
+}
