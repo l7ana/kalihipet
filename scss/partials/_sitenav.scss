@@ -1,5 +1,5 @@
 // DRAWER NAV
-.site-header .site-nav {
+.site-header .side-nav {
     .menu-button {
         top: .5em;
         right: .75em;
@@ -22,9 +22,7 @@
             transition: .2s all ease-out;
             }
     }
-
     svg {fill:$blue-lt;}
-    
     ul {
         list-style: none;
         margin: 0;
@@ -69,7 +67,19 @@
     }
 }
 
-
+.site-header {
+    .top-nav {
+        ul { list-style: none; }
+        li {
+            padding-right: 1em;
+            font-family: $type-heading;
+            font-weight: 700;
+            display: inline-block;  
+            a {text-decoration: none;}
+        }
+    }
+    
+}
 
 @media (min-width: $breakpoint-large) {
     .footer-nav {

@@ -156,7 +156,7 @@ address {
   font-style: normal;
 }
 
-.site-header .site-nav .menu-button {
+.site-header .side-nav .menu-button {
   top: 0.5em;
   right: 0.75em;
   color: #0488A6;
@@ -165,7 +165,7 @@ address {
   position: relative;
   cursor: pointer;
 }
-.site-header .site-nav .menu-button::after {
+.site-header .side-nav .menu-button::after {
   content: "";
   line-height: 1;
   text-align: center;
@@ -178,10 +178,10 @@ address {
   transform: rotate(0deg);
   transition: 0.2s all ease-out;
 }
-.site-header .site-nav svg {
+.site-header .side-nav svg {
   fill: #EFFAF9;
 }
-.site-header .site-nav ul {
+.site-header .side-nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -199,11 +199,11 @@ address {
   transition: all 0.3s ease-out;
   z-index: 1;
 }
-.site-header .site-nav li {
+.site-header .side-nav li {
   font-size: 4vw;
   min-width: 20vw;
 }
-.site-header .site-nav[data-navstate=open] .menu-button:after {
+.site-header .side-nav[data-navstate=open] .menu-button:after {
   content: "";
   line-height: 1;
   text-align: center;
@@ -218,8 +218,21 @@ address {
   z-index: 2;
   position: relative;
 }
-.site-header .site-nav[data-navstate=open] ul {
+.site-header .side-nav[data-navstate=open] ul {
   transform: translate(0, 0);
+}
+
+.site-header .top-nav ul {
+  list-style: none;
+}
+.site-header .top-nav li {
+  padding-right: 1em;
+  font-family: "aesthet-nova", serif;
+  font-weight: 700;
+  display: inline-block;
+}
+.site-header .top-nav li a {
+  text-decoration: none;
 }
 
 @media (min-width: 1250px) {
@@ -355,9 +368,9 @@ img {
 
 #mango {
   position: absolute;
-  max-width: 250px;
+  max-width: 75%;
   left: 46%;
-  bottom: 95%;
+  bottom: 100%;
   transform: rotate(2deg);
 }
 
@@ -365,6 +378,15 @@ img {
   margin: 1em 0;
 }
 
+@media (min-width: 769px) {
+  #mango {
+    position: absolute;
+    max-width: 50%;
+    left: 50%;
+    bottom: 85%;
+    transform: rotate(2deg);
+  }
+}
 @media (min-width: 1250px) {
   .map {
     position: relative;
@@ -385,7 +407,7 @@ img {
     position: absolute;
     max-width: 460px;
     left: 72%;
-    bottom: 70%;
+    bottom: 80%;
     transform: rotate(2deg);
   }
 }

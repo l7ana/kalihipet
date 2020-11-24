@@ -43,13 +43,23 @@ img {
 
 #mango {
     position: absolute;
-    max-width: 250px;
+    max-width: 75%;
     left: 46%;
-    bottom: 95%;
+    bottom: 100%;
     transform: rotate(2deg);
 }
 
 .map {margin: 1em 0;}
+
+@media (min-width: $breakpoint-small + 1px) {
+    #mango {
+        position: absolute;
+        max-width: 50%;
+        left: 50%;
+        bottom: 85%;
+        transform: rotate(2deg);
+    }
+}
 
 @media (min-width: $breakpoint-large) {
     .map {
@@ -67,7 +77,7 @@ img {
         position: absolute;
         max-width: 460px;
         left: 72%;
-        bottom: 70%;
+        bottom: 80%;
         transform: rotate(2deg);
     }
 }
