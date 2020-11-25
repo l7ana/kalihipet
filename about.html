@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,40 +10,109 @@
     <link rel="stylesheet" href="https://use.typekit.net/wio0qsb.css">
 
 </head>
+
 <body>
-    <header></header>
-    <main>
+    <header class="site-header" id="top">
+        <div class="site-identity">
+            <div class="logo">
+                <a href="index.html"> <img src="img/logos/KPC-hor.png" alt="kpc horizontal logo"></a>
+                <h3 class="hide-visually">KPC v1</h3>
+            </div>
+        </div>
+        <nav class="top-nav">
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">Services</a></li>
+            </ul>
+        </nav>
+        <nav class="side-nav" data-navstate="closed">
+            <h3 class="menu-button">
+                <span class="hide-visually">Menu</span>
+            </h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#section1">Subpage</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="site-main">
         <section class="animate-on-scroll">
             <div class="pawprints">
-              <div>paw</div>
-              <div>paw</div>
-              <div>paw</div>
-              <div>paw</div>
-              <div>paw</div>
+                <div>paw</div>
+                <div>paw</div>
+                <div>paw</div>
+                <div>paw</div>
+                <div>paw</div>
             </div>
-          </section>
-          <section>
-              <h1>Canvas</h1>
-              <canvas id="canvas"></canvas>
-          </section>
+        </section>
+        <section>
+            <h1>Canvas</h1>
+            <canvas id="canvas"></canvas>
+        </section>
     </main>
-    <footer></footer>
+    <footer class="site-footer">
+        <div class="container">
+            <img id="mango" src="img/ani/chameleon.gif" alt="chameleon">
+            <div class="footer-logo">
+                <img src="img/logos/KPC-square.png" alt="Logo / Home">
+                <img src="img/icons/fb.png" alt="facebook"><img src="img/icons/insta.png" alt="instagram">
+                <p> @kalihipetcenter</p>
+            </div>
+            <div class="row-grid">
+                <div class="column-grid col-start-2 col-end-5">
+                    <ul class="icon-list">
+                        <li><img src="img/icons/map.png" alt="location" class="icons">
+                            <address>
+                                199 Dillingham Blvd #101, <br>
+                                City Square Shopping Center</address>
+                        </li>
+                        <li><img src="img/icons/clock.png" alt="hours" class="icons"> Mon - Fri: 9am - 7pm <br>
+                            Sat - Sun: 9am - 5pm</li>
+                        <li><img class="icons" src="img/icons/email.png" alt="email"><a
+                                href="mailto:">kalihipetcenter@aol.com</a></li>
+                    </ul>
+                </div>
+                <nav class="footer-nav column-grid col-start-7 col-end-8">
+                    <ul>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Products</a></li>
+                        <li><a href="">Services</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer-nav column-grid col-start-9 col-end-10">
+                    <ul>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">My Account</a></li>
+                        <li><a href="">My Pets</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer-nav column-grid col-start-11 col-end-12">
+                    <ul>
+                        <li><a href="">FAQ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SMOOTH SCROLL BY CHRIS FERDINANDI https://github.com/cferdinandi/smooth-scroll -->
+    <script src="js/smooth-scroll.polyfills.min.js"></script>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 800,
+            speedAsDuration: true
+        });
+    </script>
+    <!-- rough.js -->
+    <script src="js/rough.min.js"></script>
+    <script>
+        const rc = rough.canvas(document.getElementById('canvas'));
+        rc.rectangle(10, 10, 200, 200); // x, y, width, height
+    </script>
+
+    <!-- Main JS -->
+    <script src="js/script.js"></script>
+
 </body>
-
-<!-- SMOOTH SCROLL BY CHRIS FERDINANDI https://github.com/cferdinandi/smooth-scroll -->
-<script src="js/smooth-scroll.polyfills.min.js"></script>
-<script>
-    var scroll = new SmoothScroll('a[href*="#"]', {
-        speed: 800,
-        speedAsDuration: true
-    });
-</script>
-<!-- rough.js -->
-<script src="js/rough.min.js"></script>
-<script>
-const rc = rough.canvas(document.getElementById('canvas'));
-rc.rectangle(10, 10, 200, 200); // x, y, width, height
-</script>
-
-<!-- Main JS -->
-<script src="js/script.js"></script>
