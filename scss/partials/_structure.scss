@@ -1,28 +1,25 @@
 // SITE STRUCTURE
-
-.site-identity {
-    display: flex;
-    align-items: center;
-}
-
 .site-header {
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+    display: grid;
+    grid-template-columns:1fr auto auto;
+    grid-gap:1em;
+    position: absolute;
+    z-index:10;
     padding: 0.5em;
     width: 100%;
-    a {color: $blue;}
-}
 
-.logo {
-    max-width: 170px;
-    margin: 10px;
-}
-
-.site-header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    position: absolute;
+    .logo {
+        max-width: 170px;
+        margin: 10px;
+    }
 
     .site-identity {
+        display: flex;
+        align-items: center;
+        a {color:$blue;}
         h1 {
             font-family: $type-heading;
             font-size: 1.5em;
@@ -42,10 +39,22 @@
 
 .site-footer {
     background-color: $yellow-lter;
-    display: flex;
-    justify-content: center;
     padding: 2em 0 3em 0;
-    .container {position: relative;}
+    .container {
+        position: relative;
+        z-index: 10;
+        // overflow-x: hidden;
+        // overflow-y: visible;
+    }
+}
+
+.footer-logo {
+    text-align: center;
+    padding-bottom: 1em;
+    img:first-child {
+        display:block;
+        margin: .5em auto;
+    }
 }
 
 // SECTIONS
