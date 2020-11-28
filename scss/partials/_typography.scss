@@ -11,7 +11,7 @@ body {
 
 h1, h2, h3 {
     font-family: $type-heading;
-    margin: .5em 0;
+    margin: 0 0 .5em 0;
     max-width: $type-linewidth;
     font-weight: 400;
 }
@@ -28,13 +28,14 @@ h4 {
     font-size: 2em; 
     text-transform: lowercase; 
     margin: .25em 0;
+    text-decoration: underline $yellow-dk solid;
 }
 
-h1 {font-size: 6.75em; line-height: .9em;}
+h1 {font-size: 6.75em; line-height: 1em;}
 
-h2 {font-size: 4.5em; line-height: 1.1em;}
+h2 {font-size: 4.25em; line-height: 1.1em;}
 
-h3 {font-size: 3em; line-height: 1.2em;}
+h3 {font-size: 2.5em; line-height: 1.2em;}
 
 p {
     margin: 0 0 .5em .25em;
@@ -71,10 +72,28 @@ hr {
     font-weight: 500;
     color: $turq;
     font-size: 1em;
-    margin: 1em auto;
+    padding: 2em 0 0 0;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    margin: 0em;
 }
 
 address {font-style: normal;}
+
+form {margin-top: 2.5em;}
+
+input[type=text] {
+width: 100%;
+padding: 12px 15px;
+margin: 5px 0 10px 0;
+box-sizing: border-box;
+border: 2px solid $yellow;
+border-radius: 30px;
+color: $type-color-lightgrey;
+}
+
+label {
+font-family: $type-heading;
+color: $blue;
+font-weight: 700;
+padding: 0 0 0 10px;
+}

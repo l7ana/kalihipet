@@ -53,7 +53,7 @@ img {
     height: 175px;
     border: 1px solid red;
     position: relative;
-    top: -100px;
+    top: -120px;
 }
 
 .map {margin: 1em 0;}
@@ -84,7 +84,10 @@ img {
         position: absolute;
         max-width: 460px;
         left: 72%;
-        bottom: 80%;
+        bottom: 90%;
         transform: rotate(2deg);
+    }
+    .mango-wrapper {
+        top: -160px;
     }
 }

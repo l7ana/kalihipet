@@ -1,8 +1,5 @@
 // SITE STRUCTURE
 .site-header {
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: space-between;
     display: grid;
     grid-template-columns:1fr auto auto;
     grid-gap:1em;
@@ -39,10 +36,11 @@
 
 .site-footer {
     background-color: $yellow-lter;
-    padding: 2em 0 3em 0;
+    padding: 2em 0 1em 0;
     .container {
         position: relative;
         z-index: 10;
+        margin-top: -10%;
         // overflow-x: hidden;
         // overflow-y: visible;
     }
@@ -75,6 +73,14 @@ section {
     place-items: center;
 }
 
+.mini-top {
+    padding: 5em 0 0 0;
+    background-image: url(../img/blocks/YellowPath211.svg);
+    background-repeat: no-repeat;
+    margin-bottom: -25%;
+}
+
+
 #section1 {
     background-image: url(../img/blocks/BluePath214.svg);
     background-repeat: no-repeat;
@@ -82,11 +88,28 @@ section {
     place-items: center;
 }
 
-#section2 {
+
+@media (min-width: $breakpoint-small + 1) {
+    #section2 {
     background-image: url(../img/blocks/BluePath215.svg);
     background-repeat: no-repeat;
     display: grid;
     place-items: center;
     padding-top: 10em;
     margin-bottom: 3em;
+    }
+}
+
+#section3 {
+    background-image: url(../img/blocks/Path53.svg);
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+}
+
+#section4 {
+    background-image: url(../img/blocks/BluePath200.svg);
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
 }

@@ -38,14 +38,13 @@ a.button.alt {
 
 .link-with-arrow {
     display: flex;
-    text-decoration: underline $yellow-dk solid;
     &::after {
     content: "";
     background-image: url(../img/buttons/60x40_pink_arrow_1.png);
     background-repeat: no-repeat;
     display: inline-block;
     height: 40px;
-    width: 96px;
+    width: 65px;
     margin-top: 13px;
     }
 }

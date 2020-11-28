@@ -1,4 +1,8 @@
 // GRID
+
+.row-grid {margin-bottom: 2em;}
+.column-grid {margin-bottom: 3em;}
+
 @media (min-width: $breakpoint-small) {
     .row-grid {
         grid-template-columns: repeat(12, 1fr);

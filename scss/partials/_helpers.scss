@@ -12,3 +12,9 @@
     font-size: clamp(1.5em, 10vw, 6em);
     margin: 0 0 0.25em 0;
 }
+
+.headline-2 {font-size: 10vw;}
+.headline-2.clamp {
+    font-size: clamp(1.5em, 10vw, 4em);
+    margin: 0 0 0.25em 0;
+}
