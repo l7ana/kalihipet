@@ -58,6 +58,10 @@ img {
 
 .map {margin: 1em 0;}
 
+.koda {
+    max-width: 300px;
+}
+
 @media (min-width: $breakpoint-small + 1px) {
     #mango {
         position: absolute;
@@ -89,5 +93,12 @@ img {
     }
     .mango-wrapper {
         top: -160px;
+    }
+    .push-out {position: relative;}
+    .koda {
+        display: inline-block;
+        position: absolute;
+        max-width: 30%;
+        transform: translate(260%, -140%);
     }
 }
