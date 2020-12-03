@@ -16,10 +16,15 @@ h1, h2, h3 {
     font-weight: 400;
 }
 
-span {font-weight: 900;}
+.blue-type {
+    color: $blue;
+    font-weight: 900;
+}
 
-.blue-type {color: $blue;}
-.turq-type {color: $turq;}
+.turq-type {
+    color: $turq;
+    font-weight: 900;
+}
 
 h4 {
     font-family: $type-heading;

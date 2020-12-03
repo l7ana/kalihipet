@@ -43,14 +43,15 @@
             <div class="container">
                 <div class="row">
                     <div>
-                        <h2 class="sectionhead">We are</h2>
-                        <h2 class="headline-2 clamp"> <span class="blue-type">Hawaii’s</span> Source For <span
+                        <h2 class="sectionhead hero-fade-in">We are</h2>
+                        <h2 class="headline-2 clamp"> <span class="blue-type">Hawai‘i’s</span> Source For <span
                                 class="blue-type">Quality</span>
                             Pet Supplies, Birds, Fish, <span class="turq-type">Reptiles,</span> Dogs, Cats & <span
                                 class="blue-type">Small
                                 Animals.</span> </h2>
 
-                        <p>Our shelves are always well stocked with a wide selection of live stock and pet supplies.</p>
+                        <p class="hero-fade-in">Our shelves are always well stocked with a wide selection of live stock
+                            and pet supplies.</p>
                     </div>
                 </div>
             </div>
@@ -120,6 +121,10 @@
                 <div>paw</div>
             </div>
             <canvas id="canvas"></canvas>
+            <!-- <svg viewBox="0 0 220 100" id="my-rect">
+                <rect x="120" width="100" height="100" rx="15" />
+            </svg> -->
+
         </section>
     </main>
     <footer class="site-footer">
@@ -182,7 +187,7 @@
     <script src="js/rough.min.js"></script>
     <script>
         const rc = rough.canvas(document.getElementById('canvas'));
-        rc.rectangle(140, 10, 120, 50, {
+        rc.path('M25,0h75c13.8,0,25,11.2,25,25l0,0c0,13.8-11.2,25-25,25H25C11.2,50,0,38.8,0,25l0,0C0,11.2,11.2,0,25,0z', {
             fill: "#FF6E6D",
             stroke: "#FF6E6D",
             strokeWidth: 4,
@@ -190,6 +195,7 @@
             hachureGap: 4,
             roughness: 2
         })
+
     </script>
 
     <!-- Main JS -->
