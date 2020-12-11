@@ -23,24 +23,64 @@
             }
     }
     svg {fill:$blue-lt;}
-    ul {
+    > ul {
         list-style: none;
         margin: 0;
-        padding: 0;
+        padding: 3em 0 0 2em;
         background-color: $blue-lt;
         position: fixed;
         top: 0;
         right: 0;
-        width: 400px;
+        width: 180px;
         height: 100vh;
         transform: translate(100%,0);
         transition:all .3s ease-out;
         z-index: 11;
     }
     li {
-        font-size: 4vw;
-        min-width: 20vw;
+        font-family: $type-body;
+        font-size: 1em;
+        font-weight: 500;
+        color: $turq;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        text-decoration: none;
+        margin-top: 1em;
     }
+    li li {
+        color: $blue;
+        font-family: $type-heading;
+        font-size: 1em;
+        font-weight: 700;
+        text-decoration: underline $yellow-dk solid;
+        text-transform: none;
+        letter-spacing: 0;
+        list-style: none;
+        margin-top: 0;
+    }
+    .side-logo {
+        text-align: center;
+        max-width: 100px;
+        margin: 1em 0 0 .5em;
+        line-height: 0;
+    }
+    ul ul {
+        margin:0;
+        padding: 0;
+    }
+
+    // > ul li:first-child,
+    // > ul li:nth-child(6),
+    // > ul li:nth-child(9) {
+    //     font-family: $type-body;
+    //     font-size: 1em;
+    //     font-weight: 500;
+    //     color: $turq;
+    //     text-transform: uppercase;
+    //     letter-spacing: 0.2em;
+    //     text-decoration: none;
+    //     margin-top: 1em;
+    
     &[data-navstate="open"] {
         .menu-button:after {
                 content: "";
@@ -50,12 +90,13 @@
             font-size: 1.5em;
             background-image: url(../img/x-02.svg);
             background-size: contain;
-            width: 1.25em;
-            height: 1.25em;
+            width: .8em;
+            height: .8em;
             transform: rotate(90deg);
             transition: .2s all ease-out;
             z-index: 2;
-            position: relative;
+            position: fixed;
+            right: .5em;
         }
         ul {
           transform: translate(0,0);

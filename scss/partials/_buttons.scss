@@ -6,8 +6,11 @@ button {
 }
 
 .button,
-a.button {
+a.button,
+input[type=submit], 
+button {
     background-image: url(../img/buttons/pink_round_1.png);
+    background-color: transparent;
     background-repeat: no-repeat;
     display: inline-block;
     height: 40px;
@@ -22,6 +25,7 @@ a.button {
     text-align: center;
     line-height: 40px;
     margin: .5em .5em 1em 0em;
+    border: none;
     &:hover {
         background-image: url(../img/buttons/pink_round_2.png);
     }

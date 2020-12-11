@@ -14,6 +14,7 @@ h1, h2, h3 {
     margin: 0 0 .5em 0;
     max-width: $type-linewidth;
     font-weight: 400;
+    color: $type-color;
 }
 
 .blue-type {
@@ -46,6 +47,7 @@ p {
     margin: 0 0 .5em .25em;
     max-width: $type-linewidth;
     font-size: 1em;
+    color: $type-color;
 }
 
 .big-p {
@@ -83,6 +85,10 @@ hr {
 }
 
 address {font-style: normal;}
+a {
+    text-decoration: none;
+    color: $blue;
+}
 
 form {margin-top: 2.5em;}
 

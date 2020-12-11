@@ -37,7 +37,6 @@ img {
     }
 }
 
-
 #mango {
     position: absolute;
     max-width: 75%;
@@ -51,9 +50,25 @@ img {
     overflow: hidden;
     width: 100%;
     height: 175px;
-    border: 1px solid red;
+    // border: 1px solid red;
     position: relative;
     top: -120px;
+}
+
+.hero-wrapper {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0px;
+}
+
+#hero-gif {
+    max-width: 300px;
+    position: absolute;
+    left: 60%;
+    bottom: 10%;
+    z-index: 1;
 }
 
 .map {margin: 1em 0;}
@@ -61,6 +76,7 @@ img {
 .koda {
     max-width: 300px;
 }
+
 
 @media (min-width: $breakpoint-small + 1px) {
     #mango {
@@ -70,9 +86,23 @@ img {
         // bottom: 85%;
         transform: rotate(2deg);
     }
+    #hero-gif {
+        max-width: 400px;
+        position: absolute;
+        left: 65%;
+        bottom: 10%;
+        z-index: 1;
+    }
 }
 
 @media (min-width: $breakpoint-large) {
+    #hero-gif {
+        max-width: 430px;
+        position: absolute;
+        left: 65%;
+        bottom: 10%;
+        z-index: 1;
+    }
     .map {
         position: relative;
         img { margin-top: -10%;}
