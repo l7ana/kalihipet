@@ -64,9 +64,17 @@ img {
 }
 
 #hero-gif {
-    max-width: 300px;
+    max-width: 230px;
     position: absolute;
-    left: 60%;
+    left: 50%;
+    bottom: 10%;
+    z-index: 1;
+}
+
+#about-gif {
+    max-width: 250px;
+    position: absolute;
+    left: 50%;
     bottom: 10%;
     z-index: 1;
 }
@@ -81,16 +89,24 @@ img {
 @media (min-width: $breakpoint-small + 1px) {
     #mango {
         position: absolute;
-        max-width: 50%;
-        left: 50%;
-        // bottom: 85%;
+        max-width: 40%;
+        left: 40%;
+        bottom: 0%;
+        top: -20%;
         transform: rotate(2deg);
     }
     #hero-gif {
-        max-width: 400px;
+        max-width: 350px;
         position: absolute;
-        left: 65%;
+        left: 60%;
         bottom: 10%;
+        z-index: 1;
+    }
+    #about-gif {
+        max-width: 250px;
+        position: absolute;
+        left: 75%;
+        bottom: 20%;
         z-index: 1;
     }
 }
@@ -101,6 +117,13 @@ img {
         position: absolute;
         left: 65%;
         bottom: 10%;
+        z-index: 1;
+    }
+    #about-gif {
+        max-width: 430px;
+        position: absolute;
+        left: 70%;
+        bottom: 5%;
         z-index: 1;
     }
     .map {
