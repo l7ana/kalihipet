@@ -917,14 +917,13 @@ section {
 .pawprints {
   position: absolute;
   top: -100px;
+  z-index: 12;
 }
 .pawprints div {
-  background: red;
   width: 50px;
   height: 50px;
   margin: 10px;
   transition: all ease-out 0.25s;
-  opacity: 0;
 }
 .pawprints div:nth-child(1) {
   transform: translate(100px, 0) rotate(45deg);
