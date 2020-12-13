@@ -79,6 +79,14 @@ img {
     z-index: 1;
 }
 
+#hamrun-updates {
+    max-width: 175px;
+    position: absolute;
+    left: 55%;
+    bottom: 60%;
+    z-index: 1;
+}
+
 .map {margin: 1em 0;}
 
 .koda {
@@ -109,6 +117,13 @@ img {
         bottom: 20%;
         z-index: 1;
     }
+    #hamrun-updates {
+        max-width: 275px;
+        position: absolute;
+        left: 0%;
+        bottom: 25%;
+        z-index: 1;
+    }    
 }
 
 @media (min-width: $breakpoint-large) {
@@ -154,4 +169,17 @@ img {
         max-width: 30%;
         transform: translate(260%, -140%);
     }
+    #hamrun-updates {
+        max-width: 370px;
+        position: absolute;
+        left: 2%;
+        bottom: 15%;
+        z-index: 1;
+    }  
+}
+
+.service-gifs {
+    display: inline-block;
+    margin: 0 auto;
+    align-content: center;
 }

@@ -192,6 +192,15 @@ label {
   padding: 0 0 0 10px;
 }
 
+.service-list {
+  list-style: none;
+  padding-left: 0;
+  font-weight: 500;
+}
+.service-list a {
+  color: rgba(0, 0, 0, 0.8);
+}
+
 .site-header .side-nav .menu-button {
   top: 0.5em;
   right: 0.75em;
@@ -387,6 +396,20 @@ a.button.alt:hover {
   margin-top: 13px;
 }
 
+.link-with-arrow-2 {
+  display: flex;
+}
+.link-with-arrow-2::after {
+  content: "";
+  background-image: url(../img/buttons/60x40_pink_arrow_3.png);
+  background-size: 75%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 40px;
+  width: 55px;
+  margin: -0.25em 0 0 0.5em;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -469,6 +492,14 @@ img {
   z-index: 1;
 }
 
+#hamrun-updates {
+  max-width: 175px;
+  position: absolute;
+  left: 55%;
+  bottom: 60%;
+  z-index: 1;
+}
+
 .map {
   margin: 1em 0;
 }
@@ -500,6 +531,14 @@ img {
     position: absolute;
     left: 75%;
     bottom: 20%;
+    z-index: 1;
+  }
+
+  #hamrun-updates {
+    max-width: 275px;
+    position: absolute;
+    left: 0%;
+    bottom: 25%;
     z-index: 1;
   }
 }
@@ -557,7 +596,21 @@ img {
     max-width: 30%;
     transform: translate(260%, -140%);
   }
+
+  #hamrun-updates {
+    max-width: 370px;
+    position: absolute;
+    left: 2%;
+    bottom: 15%;
+    z-index: 1;
+  }
 }
+.service-gifs {
+  display: inline-block;
+  margin: 0 auto;
+  align-content: center;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -682,7 +735,13 @@ body {
     grid-column-end: 13;
   }
   .row-grid > .column-grid.shift-up {
-    margin-top: -50%;
+    margin-top: -30%;
+  }
+  .row-grid > .column-grid.shift-up-med {
+    margin-top: -60%;
+  }
+  .row-grid > .column-grid.shift-up-more {
+    margin-top: -80%;
   }
 }
 .row {
@@ -819,6 +878,14 @@ section {
   background-repeat: no-repeat;
 }
 
+#services-top {
+  padding: 5em 0;
+  background-image: url(../img/blocks/about-top.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+}
+
 #section1 {
   background-image: url(../img/blocks/BluePath214.svg);
   background-repeat: no-repeat;
@@ -855,7 +922,7 @@ section {
   z-index: -1;
 }
 
-#section5 {
+#services {
   background-image: url(../img/blocks/BluePath.svg);
   background-repeat: no-repeat;
   display: grid;

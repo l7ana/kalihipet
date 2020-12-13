@@ -87,6 +87,14 @@ section {
 }
 
 
+#services-top {
+    padding: 5em 0;
+    background-image: url(../img/blocks/about-top.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+}
+
 #section1 {
     background-image: url(../img/blocks/BluePath214.svg);
     background-repeat: no-repeat;
@@ -125,7 +133,7 @@ section {
     z-index: -1;
 }
 
-#section5 {
+#services {
     background-image: url(../img/blocks/BluePath.svg);
     background-repeat: no-repeat;
     display: grid;

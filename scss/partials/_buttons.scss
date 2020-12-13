@@ -52,3 +52,17 @@ a.button.alt {
     margin-top: 13px;
     }
 }
+
+.link-with-arrow-2 {
+    display: flex;
+    &::after {
+    content: "";
+    background-image: url(../img/buttons/60x40_pink_arrow_3.png);
+    background-size: 75%;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 40px;
+    width: 55px;
+    margin: -.25em 0 0 .5em;
+    }
+}
