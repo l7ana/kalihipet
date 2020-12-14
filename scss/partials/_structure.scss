@@ -89,10 +89,8 @@ section {
 
 #services-top {
     padding: 5em 0;
-    background-image: url(../img/blocks/about-top.svg);
-    background-size: cover;
+    background-image: url(../img/blocks/YellowPath211.svg);
     background-repeat: no-repeat;
-    display: grid;
 }
 
 #section1 {
@@ -134,8 +132,17 @@ section {
 }
 
 #services {
-    background-image: url(../img/blocks/BluePath.svg);
+    background-image: url(../img/blocks/services-top.svg);
     background-repeat: no-repeat;
     display: grid;
     place-items: center;
+    background-color: $blue-lt;
+    z-index: -1;
+}
+
+#services-bottom {
+    background-image: url(../img/blocks/services-bottom.svg);
+    background-repeat: no-repeat;
+    background-color: white;
+    z-index: -1;
 }
