@@ -611,6 +611,46 @@
   }
 }
 
+#login {
+  .hero-fade-in {
+    transition: all .5s ease-out;
+    opacity: 0;
+    transform: translate(0,-20px);
+    &:nth-child(1) {transition-delay: .3s;}
+    &:nth-child(2) {transition-delay: .7s;}
+    &:nth-child(3) {transition-delay: 1s;}
+    &:nth-child(4) {transition-delay: 1.2s;}
+    &:nth-child(5) {transition-delay: 1.5s;}
+    }
+  form {
+    transition: all .5s ease-out;
+    opacity: 0;
+    transform: translate(-10px,0px);
+    transition-delay: 1.2s;
+  }
+  #kitty-bunny {
+    transition: all .5s ease-out;
+    opacity: 0;
+    transition-delay: 1.5s;
+    transform: translate(-30px,0px)scale(.9);
+    transform-origin: right center;
+}
+&[data-sectionstate="active"] {
+  .hero-fade-in {
+    opacity: 1;
+    transform: translate(0,0); 
+    }
+  form {
+    opacity: 1;
+    transform: translate(0,0); 
+  }
+  #kitty-bunny {
+    opacity: 1;
+    transform: translate(0,0)scale(1); 
+  }
+}
+}
+
 // PawPrints
 .animate-on-scroll.paws {
     position: relative;
