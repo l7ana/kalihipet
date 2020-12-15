@@ -201,6 +201,22 @@ label {
   color: rgba(0, 0, 0, 0.8);
 }
 
+#contact-bottom form .form-1st-row {
+  display: flex;
+  justify-content: space-evenly;
+}
+#contact-bottom form .email {
+  margin-right: 5%;
+}
+#contact-bottom form .phone {
+  display: inline-block;
+}
+#contact-bottom form .message input[type=text] {
+  display: inline-block;
+  width: 100%;
+  height: 7em;
+}
+
 .site-header .side-nav .menu-button {
   top: 0.5em;
   right: 0.75em;
@@ -267,6 +283,8 @@ label {
 }
 .site-header .side-nav li li a {
   color: #0488A6;
+  -webkit-text-decoration: underline #D9CF2A solid;
+          text-decoration: underline #D9CF2A solid;
 }
 .site-header .side-nav .side-logo {
   text-align: center;
@@ -382,12 +400,12 @@ button:hover {
 }
 
 button.alt,
-a.button.alt {
+input[type=submit].a.button.alt {
   background-image: url(../img/buttons/pink_round_3.png);
   color: #FF6E6D;
 }
 button.alt:hover,
-a.button.alt:hover {
+input[type=submit].a.button.alt:hover {
   background-image: url(../img/buttons/pink_round_4.png);
 }
 
@@ -534,6 +552,27 @@ img {
   top: 0px;
 }
 
+.contact-wrapper {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#contact-tiel {
+  position: absolute;
+  max-width: 300px;
+  top: -80%;
+  left: 40%;
+}
+
+#kitty-bunny {
+  position: absolute;
+  left: 50%;
+  max-width: 200px;
+  top: 30%;
+}
+
 @media (min-width: 769px) {
   #mango {
     position: absolute;
@@ -574,6 +613,20 @@ img {
     max-width: 25%;
     top: 25%;
     left: 77%;
+  }
+
+  #contact-tiel {
+    position: absolute;
+    max-width: 400px;
+    top: -30%;
+    left: 7%;
+  }
+
+  #kitty-bunny {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    max-width: 400px;
   }
 }
 @media (min-width: 1250px) {
@@ -634,6 +687,20 @@ img {
     left: 2%;
     bottom: 15%;
     z-index: 1;
+  }
+
+  #contact-tiel {
+    position: absolute;
+    max-width: 455px;
+    top: -30%;
+    left: 15%;
+  }
+
+  #kitty-bunny {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    max-width: 600px;
   }
 }
 .service-gifs {
@@ -773,6 +840,12 @@ body {
   }
   .row-grid > .column-grid.shift-up-more {
     margin-top: -70%;
+  }
+  .row-grid > .column-grid.shift-down-more {
+    margin-top: 50%;
+  }
+  .row-grid > .column-grid.shift-down {
+    margin-top: 20%;
   }
 }
 .row {
@@ -965,6 +1038,34 @@ section {
   background-repeat: no-repeat;
   background-color: white;
   z-index: -1;
+}
+
+#contact-top {
+  background-image: url(../img/blocks/contact-top.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+  padding-top: 5em;
+  margin: 0;
+  z-index: -2;
+}
+
+#contact-bottom {
+  background-repeat: no-repeat;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+#login {
+  background-image: url(../img/blocks/login-top.svg);
+  background-repeat: no-repeat;
+  display: grid;
+  padding-top: 5em;
+  margin: 0;
+  z-index: -2;
 }
 
 /* Animations */
@@ -1495,6 +1596,52 @@ section {
   transform: translate(0px, 0px);
 }
 
+#contact-top .hero-fade-in {
+  transition: all 0.5s ease-out;
+  opacity: 0;
+  transform: translate(0, -20px);
+}
+#contact-top .hero-fade-in:nth-child(1) {
+  transition-delay: 0.3s;
+}
+#contact-top .hero-fade-in:nth-child(2) {
+  transition-delay: 0.7s;
+}
+#contact-top .hero-fade-in:nth-child(3) {
+  transition-delay: 1s;
+}
+#contact-top .hero-fade-in:nth-child(4) {
+  transition-delay: 1.2s;
+}
+#contact-top .hero-fade-in:nth-child(5) {
+  transition-delay: 1.5s;
+}
+#contact-top[data-sectionstate=active] .hero-fade-in {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+#contact-bottom #contact-tiel {
+  transition: all 0.5s ease-out;
+  opacity: 0;
+  transition-delay: 0.5s;
+  transform: translate(-30px, 0px) scale(0.8);
+}
+#contact-bottom form {
+  transition: all 0.5s ease-out;
+  opacity: 0;
+  transition-delay: 1s;
+  transform: translate(-20px, 0px);
+}
+#contact-bottom[data-sectionstate=active] #contact-tiel {
+  opacity: 1;
+  transform: translate(0, 0px) scale(1);
+}
+#contact-bottom[data-sectionstate=active] form {
+  opacity: 1;
+  transform: translate(0, 0px);
+}
+
 .animate-on-scroll.paws {
   position: relative;
 }
@@ -1856,10 +2003,10 @@ section[data-sectionstate=active] .pawprints-4 div:nth-child(1) {
   transform: translate(800px, 330px) rotate(120deg);
 }
 .pawprints-5 div:nth-child(7) {
-  transform: translate(1050px, 270px) rotate(100deg);
+  transform: translate(990px, 270px) rotate(100deg);
 }
 .pawprints-5 div:nth-child(8) {
-  transform: translate(1100px, 300px) rotate(130deg);
+  transform: translate(1000px, 300px) rotate(130deg);
 }
 
 section[data-sectionstate=active] .pawprints-5 div {

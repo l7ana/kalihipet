@@ -33,7 +33,7 @@ button {
 }
 
 button.alt, 
-a.button.alt {
+input[type=submit].a.button.alt {
     background-image: url(../img/buttons/pink_round_3.png);
     color: $pink;
     &:hover {

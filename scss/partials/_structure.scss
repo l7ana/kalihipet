@@ -145,3 +145,36 @@ section {
     background-color: white;
     z-index: -1;
 }
+
+#contact-top {
+    background-image: url(../img/blocks/contact-top.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    padding-top: 5em;
+    // background-color:$blue-lt;
+    margin: 0;
+    z-index: -2;
+}
+
+#contact-bottom {
+    // background-image: url(../img/blocks/contact-top.svg);
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+#login {
+    background-image: url(../img/blocks/login-top.svg);
+    background-repeat: no-repeat;
+    // background-size: cover;
+    display: grid;
+    // place-items: center;
+    padding-top: 5em;
+    // background-color:$blue-lt;
+    margin: 0;
+    z-index: -2;
+}

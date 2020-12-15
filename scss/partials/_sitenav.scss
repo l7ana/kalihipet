@@ -58,7 +58,10 @@
         letter-spacing: 0;
         list-style: none;
         margin-top: 0;
-        a {color: $blue;}
+        a {
+            color: $blue;
+            text-decoration: underline $yellow-dk solid;
+        }
     }
     .side-logo {
         text-align: center;
