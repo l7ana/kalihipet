@@ -25,6 +25,7 @@ button {
     text-align: center;
     line-height: 40px;
     margin: .5em .5em 1em 0em;
+    cursor: pointer;
     border: none;
     &:hover {
         background-image: url(../img/buttons/pink_round_2.png);
@@ -50,6 +51,7 @@ a.button.alt {
     height: 40px;
     width: 65px;
     margin-top: 13px;
+    cursor: pointer;
     }
 }
 
@@ -64,5 +66,10 @@ a.button.alt {
     height: 40px;
     width: 55px;
     margin: -.25em 0 0 .5em;
+    cursor: pointer;
     }
+}
+
+a {
+    cursor: pointer;
 }

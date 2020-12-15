@@ -6,7 +6,7 @@
         color: $blue;
         font-size: 1.5em;
         z-index: 20;
-        position: relative;
+        position: fixed;
         cursor: pointer;
         &::after {
             content: "";
@@ -108,7 +108,10 @@
 
 .site-header {
     .top-nav {
-        ul { list-style: none; }
+        ul { 
+            list-style: none;
+            padding-right: 4em;
+         }
         li {
             padding-right: 1em;
             font-family: $type-heading;

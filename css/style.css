@@ -207,7 +207,7 @@ label {
   color: #0488A6;
   font-size: 1.5em;
   z-index: 20;
-  position: relative;
+  position: fixed;
   cursor: pointer;
 }
 .site-header .side-nav .menu-button::after {
@@ -300,6 +300,7 @@ label {
 
 .site-header .top-nav ul {
   list-style: none;
+  padding-right: 4em;
 }
 .site-header .top-nav li {
   padding-right: 1em;
@@ -370,6 +371,7 @@ button {
   text-align: center;
   line-height: 40px;
   margin: 0.5em 0.5em 1em 0em;
+  cursor: pointer;
   border: none;
 }
 .button:hover,
@@ -400,6 +402,7 @@ a.button.alt:hover {
   height: 40px;
   width: 65px;
   margin-top: 13px;
+  cursor: pointer;
 }
 
 .link-with-arrow-2 {
@@ -414,6 +417,11 @@ a.button.alt:hover {
   height: 40px;
   width: 55px;
   margin: -0.25em 0 0 0.5em;
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
 }
 
 img {
@@ -1127,6 +1135,12 @@ section {
   opacity: 0;
   transform: translate(0px, -10px);
 }
+#section1 .col-start-8 {
+  transition: all 0.5s ease-out;
+  opacity: 0;
+  transition-delay: 1.8s;
+  transform: translate(20px, 0px);
+}
 #section1[data-sectionstate=active] .col-start-1 img {
   opacity: 1;
   transform: translate(0px, 0px);
@@ -1147,13 +1161,50 @@ section {
   opacity: 1;
   transform: translate(0px, 0px);
 }
-
-#section2 .one-half:nth-child(1) {
-  transition: all 0.7s ease-out;
-  transform: translate(-50px, -50px);
+#section1[data-sectionstate=active] .col-start-8 {
+  opacity: 1;
+  transform: translate(0px, 0px);
 }
-#section2[data-sectionstate=active] .one-half:nth-child(1) {
-  transform: translate(0, 0);
+
+#section2 .row-grid:nth-child(1) .column-grid:nth-child(1) {
+  transition: all 0.5s ease-out;
+  opacity: 0;
+  transform: translate(-10px, 0px);
+}
+#section2 .row-grid:nth-child(1) .column-grid:nth-child(2) {
+  transition: all 1s ease-out;
+  opacity: 0;
+  transition-delay: 1s;
+  transform: translate(-10px, 0px) scale(0.8);
+  transform-origin: top right;
+}
+#section2 .row-grid:nth-child(2) .column-grid:nth-child(1) {
+  transition: all 0.5s ease-out;
+  opacity: 0;
+  transition-delay: 0.5s;
+  transform: translate(-10px, 0px);
+}
+#section2 .row-grid:nth-child(2) .column-grid:nth-child(2) {
+  transition: all 0.5s ease-out;
+  opacity: 0;
+  transition-delay: 0.7s;
+  transform: translate(-10px, 0px);
+}
+#section2[data-sectionstate=active] .row-grid:nth-child(1) .column-grid:nth-child(1) {
+  opacity: 1;
+  transform: translate(0px, 0px);
+}
+#section2[data-sectionstate=active] .row-grid:nth-child(1) .column-grid:nth-child(2) {
+  opacity: 1;
+  transform: translate(0px, 0px) scale(1);
+}
+#section2[data-sectionstate=active] .row-grid:nth-child(2) .column-grid:nth-child(1) {
+  opacity: 1;
+  transform: translate(0px, 0px);
+}
+#section2[data-sectionstate=active] .row-grid:nth-child(2) .column-grid:nth-child(2) {
+  opacity: 1;
+  transform: translate(0px, 0px);
 }
 
 #section3 .col-start-1.col-end-5 {
