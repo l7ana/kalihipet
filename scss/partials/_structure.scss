@@ -65,10 +65,12 @@ section {
 
 .hero {
     padding: 5em 0;
-    background-image: url(../img/blocks/YellowPath211.svg);
+    background-image: url(../img/blocks/hero-top.svg);
     background-repeat: no-repeat;
+    background-size: cover;
     display: grid;
     place-items: center;
+    z-index: -1;
 }
 
 #about-top {
@@ -86,7 +88,6 @@ section {
     background-repeat: no-repeat;
 }
 
-
 #services-top {
     padding: 5em 0;
     background-image: url(../img/blocks/YellowPath211.svg);
@@ -94,26 +95,24 @@ section {
 }
 
 #section1 {
-    background-image: url(../img/blocks/BluePath214.svg);
+    background-image: url(../img/blocks/section1-top.svg);
     background-repeat: no-repeat;
     display: grid;
     place-items: center;
+    background-color: $blue-lt;
+    z-index: -3;
 }
 
 
 #section2 {
+    background-image: url(../img/blocks/section2-top.svg);
     background-repeat: no-repeat;
     display: grid;
     place-items: center;
-    padding-top: 10em;
+    // padding-top: 10em;
     margin-bottom: 3em;
-}
-
-@media (min-width: $breakpoint-small + 1) {
-    #section2 {
-    background-image: url(../img/blocks/BluePath215.svg);
-    background-repeat: no-repeat;
-    }
+    background-color: white;
+    z-index: -3;
 }
 
 #section3 {
