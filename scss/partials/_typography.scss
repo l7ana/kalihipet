@@ -120,6 +120,7 @@ padding: 0 0 0 10px;
 
 #contact-bottom {
     form {
+        z-index: 4;
         .form-1st-row {
             display: flex;
             justify-content: space-evenly;

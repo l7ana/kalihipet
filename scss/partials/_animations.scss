@@ -63,7 +63,7 @@
 #shop-panel {
     .text-centered {
       transition: all .5s ease-out;
-      transition-delay: .25s;
+      transition-delay: 2s;
       opacity: 0;
       transform: translate(0,-30px); 
     }
@@ -77,21 +77,21 @@
 }
 
 // Drop-In Children with Delays
-.animate-drop-in-delay,
-.animate-drop-in-delay[data-sectionstate="inactive"] {
+.animal-icons,
+.animal-icons[data-sectionstate="inactive"] {
  * {
         transition: all 1s ease-out;
         opacity: 0;
         transform: translate(0,-20px);
-        &:nth-child(1) {transition-delay: .7s;}
-        &:nth-child(2) {transition-delay: 1s;}
-        &:nth-child(3) {transition-delay: 1.2s;}
-        &:nth-child(4) {transition-delay: 1.5s;}
-        &:nth-child(5) {transition-delay: 1.7s;}
-        &:nth-child(6) {transition-delay: 2s;}
+        &:nth-child(1) {transition-delay: 2.5s;}
+        &:nth-child(2) {transition-delay: 2.7s;}
+        &:nth-child(3) {transition-delay: 3s;}
+        &:nth-child(4) {transition-delay: 3.2s;}
+        &:nth-child(5) {transition-delay: 3.5s;}
+        &:nth-child(6) {transition-delay: 3.7s;}
     }
 }
-[data-sectionstate="active"] .animate-drop-in-delay {
+[data-sectionstate="active"] .animal-icons {
     * {
         opacity: 1;
         transform: translate(0,0); 
@@ -655,12 +655,13 @@
 .animate-on-scroll.paws {
     position: relative;
     // min-height: 1vh;
+    // overflow-x: hidden;
 }
 
 .pawprints {
     position: absolute;
     top: -50vh;
-    z-index: -1;
+    z-index: 2;
     div {
       width: 50px;
       height: 50px;
@@ -705,22 +706,25 @@
     div {
       opacity: .3;
     }
-    div:nth-child(10) { transition-delay: .5s; }
-    div:nth-child(9) { transition-delay: 1s; }
-    div:nth-child(8) { transition-delay: 1.25s; }
-    div:nth-child(7) { transition-delay: 1.5s; }
-    div:nth-child(6) { transition-delay: 1.75s; }
-    div:nth-child(5) { transition-delay: 2s; }
-    div:nth-child(4) { transition-delay: 2.255s; }
-    div:nth-child(3) { transition-delay: 2.4s; }
-    div:nth-child(2) { transition-delay: 2.5s; }
-    div:nth-child(1) { transition-delay: 2.7s; }
+    div:nth-child(10) { transition-delay: $pawprint-delay; }
+    div:nth-child(9) { transition-delay: $pawprint-delay + $pawprint-increment; }
+    div:nth-child(8) { transition-delay: $pawprint-delay + ($pawprint-increment * 2); }
+    div:nth-child(7) { transition-delay: $pawprint-delay + ($pawprint-increment * 3); }
+    div:nth-child(6) { transition-delay: $pawprint-delay + ($pawprint-increment * 4); }
+    div:nth-child(5) { transition-delay: $pawprint-delay + ($pawprint-increment * 5); }
+    div:nth-child(4) { transition-delay: $pawprint-delay + ($pawprint-increment * 6); }
+    div:nth-child(3) { transition-delay: $pawprint-delay + ($pawprint-increment * 7); }
+    div:nth-child(2) { transition-delay: $pawprint-delay + ($pawprint-increment * 8); }
+    div:nth-child(1) { transition-delay: $pawprint-delay + ($pawprint-increment * 9); }
   }
 
   .pawprints-2 {
     position: absolute;
-    z-index: -1;
+    z-index: 2;
+    width: 100%;
     top: -50vh;
+    right: 0;
+    overflow: hidden;
   
     div {
       width: 50px;
@@ -766,22 +770,25 @@
     div {
       opacity: .3;
     }
-    div:nth-child(10) { transition-delay: .5s; }
-    div:nth-child(9) { transition-delay: 1s; }
-    div:nth-child(8) { transition-delay: 1.25s; }
-    div:nth-child(7) { transition-delay: 1.5s; }
-    div:nth-child(6) { transition-delay: 1.75s; }
-    div:nth-child(5) { transition-delay: 2s; }
-    div:nth-child(4) { transition-delay: 2.255s; }
-    div:nth-child(3) { transition-delay: 2.4s; }
-    div:nth-child(2) { transition-delay: 2.5s; }
-    div:nth-child(1) { transition-delay: 2.7s; }
+    div:nth-child(10) { transition-delay: $pawprint-delay; }
+    div:nth-child(9) { transition-delay: $pawprint-delay + $pawprint-increment; }
+    div:nth-child(8) { transition-delay: $pawprint-delay + ($pawprint-increment * 2); }
+    div:nth-child(7) { transition-delay: $pawprint-delay + ($pawprint-increment * 3); }
+    div:nth-child(6) { transition-delay: $pawprint-delay + ($pawprint-increment * 4); }
+    div:nth-child(5) { transition-delay: $pawprint-delay + ($pawprint-increment * 5); }
+    div:nth-child(4) { transition-delay: $pawprint-delay + ($pawprint-increment * 6); }
+    div:nth-child(3) { transition-delay: $pawprint-delay + ($pawprint-increment * 7); }
+    div:nth-child(2) { transition-delay: $pawprint-delay + ($pawprint-increment * 8); }
+    div:nth-child(1) { transition-delay: $pawprint-delay + ($pawprint-increment * 9); }
   }
 
   .pawprints-3 {
     position: absolute;
-    z-index: -1;
+    z-index: 2;
     top: -50vh;
+    right: 90vh;
+    // border: 1px solid red;
+    // width: 100%;
   
     div {
       width: 50px;
@@ -836,25 +843,30 @@
     div {
       opacity: .3;
     }
-    div:nth-child(13) { transition-delay: .2s; }
-    div:nth-child(12) { transition-delay: .4s; }
-    div:nth-child(11) { transition-delay: .6s; }
-    div:nth-child(10) { transition-delay: .8s; }
-    div:nth-child(9) { transition-delay: 1s; }
-    div:nth-child(8) { transition-delay: 1.2s; }
-    div:nth-child(7) { transition-delay: 1.4s; }
-    div:nth-child(6) { transition-delay: 1.6s; }
-    div:nth-child(5) { transition-delay: 1.8s; }
-    div:nth-child(4) { transition-delay: 2s; }
-    div:nth-child(3) { transition-delay: 2.2s; }
-    div:nth-child(2) { transition-delay: 2.4s; }
-    div:nth-child(1) { transition-delay: 2.6s; }
+    div:nth-child(13) { transition-delay: $pawprint-delay + ($pawprint-increment * 0); }
+    div:nth-child(12) { transition-delay: $pawprint-delay + ($pawprint-increment * 1); }
+    div:nth-child(11) { transition-delay: $pawprint-delay + ($pawprint-increment * 2); }
+    div:nth-child(10) { transition-delay: $pawprint-delay + ($pawprint-increment *3); }
+    div:nth-child(9) { transition-delay: $pawprint-delay + ($pawprint-increment * 4);}
+    div:nth-child(8) { transition-delay: $pawprint-delay + ($pawprint-increment * 5); }
+    div:nth-child(7) { transition-delay: $pawprint-delay + ($pawprint-increment * 6); }
+    div:nth-child(6) { transition-delay: $pawprint-delay + ($pawprint-increment * 7); }
+    div:nth-child(5) { transition-delay: $pawprint-delay + ($pawprint-increment * 8); }
+    div:nth-child(4) { transition-delay: $pawprint-delay + ($pawprint-increment * 9); }
+    div:nth-child(3) { transition-delay: $pawprint-delay + ($pawprint-increment * 10); }
+    div:nth-child(2) { transition-delay: $pawprint-delay + ($pawprint-increment * 11); }
+    div:nth-child(1) { transition-delay: $pawprint-delay + ($pawprint-increment * 12); }
   }
 
   .pawprints-4 {
     position: absolute;
-    z-index: -1;
-    top: -50vh;
+    z-index: 2;
+    top: -40vh;
+    right: 0;
+    bottom: 0;
+    // border: 1px solid green;
+    overflow: hidden;
+    width: 100%;
   
     div {
       width: 50px;
@@ -900,22 +912,27 @@
     div {
       opacity: .3;
     }
-    div:nth-child(10) { transition-delay: .5s; }
-    div:nth-child(9) { transition-delay: 1s; }
-    div:nth-child(8) { transition-delay: 1.25s; }
-    div:nth-child(7) { transition-delay: 1.5s; }
-    div:nth-child(6) { transition-delay: 1.75s; }
-    div:nth-child(5) { transition-delay: 2s; }
-    div:nth-child(4) { transition-delay: 2.255s; }
-    div:nth-child(3) { transition-delay: 2.4s; }
-    div:nth-child(2) { transition-delay: 2.5s; }
-    div:nth-child(1) { transition-delay: 2.7s; }
+    div:nth-child(10) { transition-delay: $pawprint-delay + ($pawprint-increment * 0); }
+    div:nth-child(9) { transition-delay: $pawprint-delay + ($pawprint-increment * 1);}
+    div:nth-child(8) { transition-delay: $pawprint-delay + ($pawprint-increment * 2); }
+    div:nth-child(7) { transition-delay: $pawprint-delay + ($pawprint-increment * 3); }
+    div:nth-child(6) { transition-delay: $pawprint-delay + ($pawprint-increment * 4); }
+    div:nth-child(5) { transition-delay: $pawprint-delay + ($pawprint-increment * 5); }
+    div:nth-child(4) { transition-delay: $pawprint-delay + ($pawprint-increment * 6); }
+    div:nth-child(3) { transition-delay: $pawprint-delay + ($pawprint-increment * 7); }
+    div:nth-child(2) { transition-delay: $pawprint-delay + ($pawprint-increment * 8); }
+    div:nth-child(1) { transition-delay: $pawprint-delay + ($pawprint-increment * 9); }
   }
-
+  
   .pawprints-5 {
     position: absolute;
-    z-index: -1;
+    z-index: 2;
     top: -50vh;
+    bottom: 10vh;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    // border: red 1px solid;
   
     div {
       width: 50px;
@@ -950,25 +967,30 @@
       }
     }
   }
-
   section[data-sectionstate="active"] .pawprints-5 {
     div {
       opacity: .3;
     }
-    div:nth-child(8) { transition-delay: 5s; }
-    div:nth-child(7) { transition-delay: 4.6s; }
-    div:nth-child(6) { transition-delay: 4s; }
-    div:nth-child(5) { transition-delay: 3.2s; }
-    div:nth-child(4) { transition-delay: 3s; }
-    div:nth-child(3) { transition-delay: 2.6s; }
-    div:nth-child(2) { transition-delay: 2.4s; }
-    div:nth-child(1) { transition-delay: .25s; }
+    div:nth-child(8) { transition-delay: $pawprint-delay + ($pawprint-increment * 7); }
+    div:nth-child(7) { transition-delay: $pawprint-delay + ($pawprint-increment * 6); }
+    div:nth-child(6) { transition-delay: $pawprint-delay + ($pawprint-increment * 5); }
+    div:nth-child(5) { transition-delay: $pawprint-delay + ($pawprint-increment * 4); }
+    div:nth-child(4) { transition-delay: $pawprint-delay + ($pawprint-increment * 3); }
+    div:nth-child(3) { transition-delay: $pawprint-delay + ($pawprint-increment * 2); }
+    div:nth-child(2) { transition-delay: $pawprint-delay + ($pawprint-increment * 1); }
+    div:nth-child(1) { transition-delay: $pawprint-delay + ($pawprint-increment * 0); }
   }
 
   .pawprints-6 {
     position: absolute;
-    z-index: -1;
-    top: -50vh;
+    z-index: 2;
+    top: -40vh;
+    bottom: 5vh;
+    right: 0;
+    overflow: hidden;
+    width: 75%;
+    // border: 1px solid red;
+    // max-width: 1100px;
   
     div {
       width: 50px;
@@ -978,58 +1000,49 @@
       opacity: 0;
   
       &:nth-child(1) {
-        transform: translate(1100px, 700px) rotate(240deg);
+        transform: translate(800px, 700px) rotate(240deg);
       }
       &:nth-child(2) {
-        transform: translate(1100px, 770px) rotate(250deg);
+        transform: translate(800px, 520px) rotate(250deg);
       }
       &:nth-child(3) {
-        transform: translate(960px, 790px) rotate(200deg);
+        transform: translate(690px, 540px) rotate(200deg);
       }
       &:nth-child(4) {
-        transform: translate(870px, 600px) rotate(250deg);
+        transform: translate(660px, 590px) rotate(250deg);
       }
       &:nth-child(5) {
-        transform: translate(680px, 520px) rotate(310deg);
+        transform: translate(480px, 500px) rotate(310deg);
       }
       &:nth-child(6) {
-        transform: translate(720px, 580px) rotate(300deg);
+        transform: translate(510px, 570px) rotate(210deg);
       }
       &:nth-child(7) {
-        transform: translate(560px, 580px) rotate(230deg);
+        transform: translate(320px, 380px) rotate(300deg);
       }
       &:nth-child(8) {
-        transform: translate(530px, 400px) rotate(220deg);
+        transform: translate(300px, 420px) rotate(305deg);
       }
       &:nth-child(9) {
-        transform: translate(400px, 520px) rotate(190deg);
+        transform: translate(150px, 320px) rotate(250deg);
       }
       &:nth-child(10) {
-        transform: translate(520px, 550px) rotate(170deg);
+        transform: translate(180px, 360px) rotate(210deg);
       }
       &:nth-child(11) {
-        transform: translate(460px, 580px) rotate(130deg);
+        transform: translate(40px, 340px) rotate(190deg);
       }
       &:nth-child(12) {
-        transform: translate(580px, 600px) rotate(120deg);
+        transform: translate(150px, 340px) rotate(170deg);
       }
       &:nth-child(13) {
-        transform: translate(740px, 500px) rotate(60deg);
+        transform: translate(45px, 380px) rotate(150deg);
       }
       &:nth-child(14) {
-        transform: translate(940px, 700px) rotate(160deg);
+        transform: translate(180px, 370px) rotate(130deg);
       }
       &:nth-child(15) {
-        transform: translate(820px, 700px) rotate(180deg);
-      }
-      &:nth-child(16) {
-        transform: translate(900px, 740px) rotate(130deg);
-      }
-      &:nth-child(17) {
-        transform: translate(1000px, 620px) rotate(90deg);
-      }
-      &:nth-child(18) {
-        transform: translate(1100px, 670px) rotate(80deg);
+        transform: translate(120px, 430px) rotate(130deg);
       }
     }
   }
@@ -1038,29 +1051,26 @@
     div {
       opacity: .3;
     }
-    div:nth-child(18) { transition-delay: 3.8s; }
-    div:nth-child(17) { transition-delay: 3.6s; }
-    div:nth-child(16) { transition-delay: 3.4s; }
-    div:nth-child(15) { transition-delay: 3.2s; }
-    div:nth-child(14) { transition-delay: 3s; }
-    div:nth-child(13) { transition-delay: 2.8s; }
-    div:nth-child(12) { transition-delay: 2.6s; }
-    div:nth-child(11) { transition-delay: 2.4s; }
-    div:nth-child(10) { transition-delay: 2.2s; }
-    div:nth-child(9) { transition-delay: 2s; }
-    div:nth-child(8) { transition-delay: 1.8s; }
-    div:nth-child(7) { transition-delay: 1.6s; }
-    div:nth-child(6) { transition-delay: 1.4s; }
-    div:nth-child(5) { transition-delay: 1.2s; }
-    div:nth-child(4) { transition-delay: 1s; }
-    div:nth-child(3) { transition-delay: .8s; }
-    div:nth-child(2) { transition-delay: .5s; }
-    div:nth-child(1) { transition-delay: .24s; }
+    div:nth-child(15) { transition-delay: $pawprint-delay + ($pawprint-increment * 14); }
+    div:nth-child(14) { transition-delay: $pawprint-delay + ($pawprint-increment * 13); }
+    div:nth-child(13) { transition-delay: $pawprint-delay + ($pawprint-increment * 12); }
+    div:nth-child(12) { transition-delay: $pawprint-delay + ($pawprint-increment * 11); }
+    div:nth-child(11) { transition-delay: $pawprint-delay + ($pawprint-increment * 10); }
+    div:nth-child(10) { transition-delay: $pawprint-delay + ($pawprint-increment * 9); }
+    div:nth-child(9) { transition-delay: $pawprint-delay + ($pawprint-increment * 8);}
+    div:nth-child(8) { transition-delay: $pawprint-delay + ($pawprint-increment * 7); }
+    div:nth-child(7) { transition-delay: $pawprint-delay + ($pawprint-increment * 6); }
+    div:nth-child(6) { transition-delay: $pawprint-delay + ($pawprint-increment * 5); }
+    div:nth-child(5) { transition-delay: $pawprint-delay + ($pawprint-increment * 4); }
+    div:nth-child(4) { transition-delay: $pawprint-delay + ($pawprint-increment * 3); }
+    div:nth-child(3) { transition-delay: $pawprint-delay + ($pawprint-increment * 2); }
+    div:nth-child(2) { transition-delay: $pawprint-delay + ($pawprint-increment * 1); }
+    div:nth-child(1) { transition-delay: $pawprint-delay + ($pawprint-increment * 0); }
   }
 
   .pawprints-7 {
     position: absolute;
-    z-index: -1;
+    // z-index: -1;
     top: -50vh;
   
     div {
@@ -1119,20 +1129,20 @@
     div {
       opacity: .3;
     }
-    div:nth-child(14) { transition-delay: .5s; }
-    div:nth-child(13) { transition-delay: 1s; }
-    div:nth-child(12) { transition-delay: 1.25s; }
-    div:nth-child(11) { transition-delay: 1.5s; }
-    div:nth-child(10) { transition-delay: 1.7s; }
-    div:nth-child(9) { transition-delay: 2s; }
-    div:nth-child(8) { transition-delay: 2.25s; }
-    div:nth-child(7) { transition-delay: 2.5s; }
-    div:nth-child(6) { transition-delay: 2.75s; }
-    div:nth-child(5) { transition-delay: 3s; }
-    div:nth-child(4) { transition-delay: 3.255s; }
-    div:nth-child(3) { transition-delay: 3.4s; }
-    div:nth-child(2) { transition-delay: 3.5s; }
-    div:nth-child(1) { transition-delay: 3.7s; }
+    div:nth-child(14) { transition-delay: $pawprint-delay + ($pawprint-increment * 0); }
+    div:nth-child(13) { transition-delay: $pawprint-delay + ($pawprint-increment * 1); }
+    div:nth-child(12) { transition-delay: $pawprint-delay + ($pawprint-increment * 2); }
+    div:nth-child(11) { transition-delay: $pawprint-delay + ($pawprint-increment * 3); }
+    div:nth-child(10) { transition-delay: $pawprint-delay + ($pawprint-increment * 4); }
+    div:nth-child(9) { transition-delay: $pawprint-delay + ($pawprint-increment * 5);}
+    div:nth-child(8) { transition-delay: $pawprint-delay + ($pawprint-increment * 6); }
+    div:nth-child(7) { transition-delay: $pawprint-delay + ($pawprint-increment * 7); }
+    div:nth-child(6) { transition-delay: $pawprint-delay + ($pawprint-increment * 8); }
+    div:nth-child(5) { transition-delay: $pawprint-delay + ($pawprint-increment * 9); }
+    div:nth-child(4) { transition-delay: $pawprint-delay + ($pawprint-increment * 10); }
+    div:nth-child(3) { transition-delay: $pawprint-delay + ($pawprint-increment * 11); }
+    div:nth-child(2) { transition-delay: $pawprint-delay + ($pawprint-increment * 12); }
+    div:nth-child(1) { transition-delay: $pawprint-delay + ($pawprint-increment * 13); }
   }
 
 // Helpers

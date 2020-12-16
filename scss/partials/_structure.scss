@@ -41,18 +41,11 @@
         position: relative;
         z-index: 10;
         margin-top: -10%;
-        // overflow-x: hidden;
-        // overflow-y: visible;
     }
 }
 
 .footer-logo {
     text-align: center;
-    padding-bottom: 1em;
-    img:first-child {
-        display:block;
-        margin: .5em auto;
-    }
 }
 
 // SECTIONS
@@ -70,7 +63,6 @@ section {
     background-size: cover;
     display: grid;
     place-items: center;
-    z-index: -1;
 }
 
 #about-top {
@@ -80,6 +72,7 @@ section {
     background-repeat: no-repeat;
     display: grid;
     place-items: center;
+    .column-grid {z-index: 4;}
 }
 
 .mini-top {
@@ -88,21 +81,32 @@ section {
     background-repeat: no-repeat;
 }
 
+#shop-panel {
+    padding: 1em 0 2em 0;
+    background-image: url(../img/blocks/section1-top.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    display: grid;
+    place-items: center;
+    background-color: $blue-lt;
+    .container {z-index: 5;}
+}
+
 #services-top {
     padding: 5em 0;
     background-image: url(../img/blocks/YellowPath211.svg);
     background-repeat: no-repeat;
+    .column-grid {z-index: 4;}
 }
 
 #section1 {
-    background-image: url(../img/blocks/section1-top.svg);
-    background-repeat: no-repeat;
     display: grid;
-    place-items: center;
     background-color: $blue-lt;
-    z-index: -3;
+    z-index: 4;
+    .column-grid {
+        z-index: 4;
+    }
 }
-
 
 #section2 {
     background-image: url(../img/blocks/section2-top.svg);
@@ -112,12 +116,11 @@ section {
     // padding-top: 10em;
     margin-bottom: 3em;
     background-color: white;
-    z-index: -3;
 }
 
 #section3 {
     background-color:$blue-lter;
-    z-index: -1;
+    .column-grid {z-index: 4;}
 }
 
 #section4 {
@@ -127,7 +130,7 @@ section {
     margin-top: -5%;
     display: grid;
     place-items: center;
-    z-index: -1;
+    .column-grid {z-index: 4;}
 }
 
 #services {
@@ -136,14 +139,14 @@ section {
     display: grid;
     place-items: center;
     background-color: $blue-lt;
-    z-index: -1;
+    .column-grid {z-index: 4;}
 }
 
 #services-bottom {
     background-image: url(../img/blocks/services-bottom.svg);
     background-repeat: no-repeat;
     background-color: white;
-    z-index: -1;
+    position: relative;
 }
 
 #contact-top {
@@ -155,7 +158,7 @@ section {
     padding-top: 5em;
     // background-color:$blue-lt;
     margin: 0;
-    z-index: -2;
+    .column-grid {z-index: 4;}
 }
 
 #contact-bottom {
@@ -165,6 +168,7 @@ section {
     place-items: center;
     padding: 0;
     margin: 0;
+    .column-grid {z-index: 4;}
 }
 
 #login {
@@ -176,5 +180,5 @@ section {
     padding-top: 5em;
     // background-color:$blue-lt;
     margin: 0;
-    z-index: -2;
+    .column-grid {z-index: 4;}
 }

@@ -3,17 +3,6 @@ img {
     height: auto;
 }
 
-.animal-icons{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 5em;
-    img {
-        padding-right: 10px;
-    }
-}
-
 .icons {
     display: inline-block;
     max-width: 17px;
@@ -76,7 +65,7 @@ img {
     position: absolute;
     left: 50%;
     bottom: 10%;
-    z-index: 1;
+    z-index: 6;
 }
 
 #hamrun-updates {
@@ -95,6 +84,7 @@ img {
     max-width: 50%;
    top: 60%;
    left: 50%;
+   z-index: 4;
 }
 
 .koda-wrapper {
@@ -107,18 +97,21 @@ img {
 }
 
 .contact-wrapper {
-    // overflow: hidden;
+    // overflow-x: hidden;
     position: relative;
     height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
+    // border: 1px red solid;
 }
 
 #contact-tiel {
     position: absolute;
-    max-width: 300px;
+    max-width: 290px;
     top: -80%;
     left: 40%;
+    z-index: 4;
 }
 
 #kitty-bunny {
@@ -149,33 +142,33 @@ img {
         position: absolute;
         left: 75%;
         bottom: 20%;
-        z-index: 1;
+        z-index: 5;
     }
     #hamrun-updates {
-        max-width: 275px;
+        max-width: 25%;
         position: absolute;
-        left: 0%;
+        left: 2%;
         bottom: 25%;
         z-index: 1;
     }
     #koda {
-        display: inline-block;
-        position: absolute;
         max-width: 25%;
        top: 25%;
-       left: 77%;
+       left: 77%;     
     }
     #contact-tiel {
         position: absolute;
         max-width: 400px;
         top: -30%;
         left: 7%;
+        z-index: 4;
     }
     #kitty-bunny {
         position: absolute;
         left: 50%;
         top: 40%;
         max-width: 400px;
+        z-index: 4;
     }
 }
 
@@ -192,18 +185,19 @@ img {
         position: absolute;
         left: 70%;
         bottom: 5%;
-        z-index: 1;
+        z-index: 5;
     }
     .map {
         position: relative;
         img { margin-top: -10%;}
         }
     .footer-logo {
-        display: block;
+        display: inline-block;
         position: absolute;
         max-width: 130px;
         left: calc(4% - 130px);
         text-align: center;
+        a {display: inline-block;}
     }
     #mango {
         position: absolute;

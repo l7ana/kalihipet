@@ -5,6 +5,10 @@ button {
     font-family: $type-body;
 }
 
+a {
+    cursor: pointer;
+}
+
 .button,
 a.button,
 input[type=submit], 
@@ -33,7 +37,7 @@ button {
 }
 
 button.alt, 
-input[type=submit].a.button.alt {
+input[type=submit].alt, a.button.alt {
     background-image: url(../img/buttons/pink_round_3.png);
     color: $pink;
     &:hover {
@@ -70,6 +74,43 @@ input[type=submit].a.button.alt {
     }
 }
 
-a {
+.animal-icons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 5em;
     cursor: pointer;
-}
+    .icon-hover {
+        width: 100px;
+        padding-right: 10px;
+        cursor: pointer;
+        display: inline-block;
+        text-align: center;
+        p {
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+            font-size: 75%;
+            color: $pink;
+            transition: all .2s ease-out;
+            transform: translate(0px,0px);
+            opacity: 0;
+        }
+        img {
+            transition: all .2s ease-out;
+            transform: scale(1);
+            transform-origin: top center;
+        }
+    }
+    .icon-hover:hover {
+        p {
+            opacity: 1;
+            transform: translate(0,10px);
+        }
+        img {
+            transform: scale(1.2);
+        }
+    }
+} 

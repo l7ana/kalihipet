@@ -201,6 +201,9 @@ label {
   color: rgba(0, 0, 0, 0.8);
 }
 
+#contact-bottom form {
+  z-index: 4;
+}
 #contact-bottom form .form-1st-row {
   display: flex;
   justify-content: space-evenly;
@@ -294,7 +297,7 @@ label {
 }
 .site-header .side-nav ul ul {
   margin: 0;
-  padding: 0 0 0.4em 0;
+  padding: 0 0 5px 0;
 }
 .site-header .side-nav[data-navstate=open] .menu-button:after {
   content: "";
@@ -369,6 +372,10 @@ button {
   font-family: "canada-type-gibson", sans-serif;
 }
 
+a {
+  cursor: pointer;
+}
+
 .button,
 a.button,
 input[type=submit],
@@ -400,12 +407,12 @@ button:hover {
 }
 
 button.alt,
-input[type=submit].a.button.alt {
+input[type=submit].alt, a.button.alt {
   background-image: url(../img/buttons/pink_round_3.png);
   color: #FF6E6D;
 }
 button.alt:hover,
-input[type=submit].a.button.alt:hover {
+input[type=submit].alt:hover, a.button.alt:hover {
   background-image: url(../img/buttons/pink_round_4.png);
 }
 
@@ -438,24 +445,48 @@ input[type=submit].a.button.alt:hover {
   cursor: pointer;
 }
 
-a {
-  cursor: pointer;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 .animal-icons {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  text-align: center;
   margin-bottom: 5em;
+  cursor: pointer;
 }
-.animal-icons img {
+.animal-icons .icon-hover {
+  width: 100px;
   padding-right: 10px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+.animal-icons .icon-hover p {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  font-size: 75%;
+  color: #FF6E6D;
+  transition: all 0.2s ease-out;
+  transform: translate(0px, 0px);
+  opacity: 0;
+}
+.animal-icons .icon-hover img {
+  transition: all 0.2s ease-out;
+  transform: scale(1);
+  transform-origin: top center;
+}
+.animal-icons .icon-hover:hover p {
+  opacity: 1;
+  transform: translate(0, 10px);
+}
+.animal-icons .icon-hover:hover img {
+  transform: scale(1.2);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .icons {
@@ -521,7 +552,7 @@ img {
   position: absolute;
   left: 50%;
   bottom: 10%;
-  z-index: 1;
+  z-index: 6;
 }
 
 #hamrun-updates {
@@ -542,6 +573,7 @@ img {
   max-width: 50%;
   top: 60%;
   left: 50%;
+  z-index: 4;
 }
 
 .koda-wrapper {
@@ -555,15 +587,17 @@ img {
 .contact-wrapper {
   position: relative;
   height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
 
 #contact-tiel {
   position: absolute;
-  max-width: 300px;
+  max-width: 290px;
   top: -80%;
   left: 40%;
+  z-index: 4;
 }
 
 #kitty-bunny {
@@ -596,20 +630,18 @@ img {
     position: absolute;
     left: 75%;
     bottom: 20%;
-    z-index: 1;
+    z-index: 5;
   }
 
   #hamrun-updates {
-    max-width: 275px;
+    max-width: 25%;
     position: absolute;
-    left: 0%;
+    left: 2%;
     bottom: 25%;
     z-index: 1;
   }
 
   #koda {
-    display: inline-block;
-    position: absolute;
     max-width: 25%;
     top: 25%;
     left: 77%;
@@ -620,6 +652,7 @@ img {
     max-width: 400px;
     top: -30%;
     left: 7%;
+    z-index: 4;
   }
 
   #kitty-bunny {
@@ -627,6 +660,7 @@ img {
     left: 50%;
     top: 40%;
     max-width: 400px;
+    z-index: 4;
   }
 }
 @media (min-width: 1250px) {
@@ -643,7 +677,7 @@ img {
     position: absolute;
     left: 70%;
     bottom: 5%;
-    z-index: 1;
+    z-index: 5;
   }
 
   .map {
@@ -654,11 +688,14 @@ img {
   }
 
   .footer-logo {
-    display: block;
+    display: inline-block;
     position: absolute;
     max-width: 130px;
     left: calc(4% - 130px);
     text-align: center;
+  }
+  .footer-logo a {
+    display: inline-block;
   }
 
   #mango {
@@ -946,11 +983,6 @@ body {
 
 .footer-logo {
   text-align: center;
-  padding-bottom: 1em;
-}
-.footer-logo img:first-child {
-  display: block;
-  margin: 0.5em auto;
 }
 
 section {
@@ -966,7 +998,6 @@ section {
   background-size: cover;
   display: grid;
   place-items: center;
-  z-index: -1;
 }
 
 #about-top {
@@ -977,6 +1008,9 @@ section {
   display: grid;
   place-items: center;
 }
+#about-top .column-grid {
+  z-index: 4;
+}
 
 .mini-top {
   padding: 5em 0 0 0;
@@ -984,19 +1018,35 @@ section {
   background-repeat: no-repeat;
 }
 
+#shop-panel {
+  padding: 1em 0 2em 0;
+  background-image: url(../img/blocks/section1-top.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  display: grid;
+  place-items: center;
+  background-color: #EFFAF9;
+}
+#shop-panel .container {
+  z-index: 5;
+}
+
 #services-top {
   padding: 5em 0;
   background-image: url(../img/blocks/YellowPath211.svg);
   background-repeat: no-repeat;
 }
+#services-top .column-grid {
+  z-index: 4;
+}
 
 #section1 {
-  background-image: url(../img/blocks/section1-top.svg);
-  background-repeat: no-repeat;
   display: grid;
-  place-items: center;
   background-color: #EFFAF9;
-  z-index: -3;
+  z-index: 4;
+}
+#section1 .column-grid {
+  z-index: 4;
 }
 
 #section2 {
@@ -1006,12 +1056,13 @@ section {
   place-items: center;
   margin-bottom: 3em;
   background-color: white;
-  z-index: -3;
 }
 
 #section3 {
   background-color: #FAFDFD;
-  z-index: -1;
+}
+#section3 .column-grid {
+  z-index: 4;
 }
 
 #section4 {
@@ -1021,7 +1072,9 @@ section {
   margin-top: -5%;
   display: grid;
   place-items: center;
-  z-index: -1;
+}
+#section4 .column-grid {
+  z-index: 4;
 }
 
 #services {
@@ -1030,14 +1083,16 @@ section {
   display: grid;
   place-items: center;
   background-color: #EFFAF9;
-  z-index: -1;
+}
+#services .column-grid {
+  z-index: 4;
 }
 
 #services-bottom {
   background-image: url(../img/blocks/services-bottom.svg);
   background-repeat: no-repeat;
   background-color: white;
-  z-index: -1;
+  position: relative;
 }
 
 #contact-top {
@@ -1048,7 +1103,9 @@ section {
   place-items: center;
   padding-top: 5em;
   margin: 0;
-  z-index: -2;
+}
+#contact-top .column-grid {
+  z-index: 4;
 }
 
 #contact-bottom {
@@ -1058,6 +1115,9 @@ section {
   padding: 0;
   margin: 0;
 }
+#contact-bottom .column-grid {
+  z-index: 4;
+}
 
 #login {
   background-image: url(../img/blocks/login-top.svg);
@@ -1065,7 +1125,9 @@ section {
   display: grid;
   padding-top: 5em;
   margin: 0;
-  z-index: -2;
+}
+#login .column-grid {
+  z-index: 4;
 }
 
 /* Animations */
@@ -1145,7 +1207,7 @@ section {
 
 #shop-panel .text-centered {
   transition: all 0.5s ease-out;
-  transition-delay: 0.25s;
+  transition-delay: 2s;
   opacity: 0;
   transform: translate(0, -30px);
 }
@@ -1154,38 +1216,38 @@ section {
   transform: translate(0px, 0px);
 }
 
-.animate-drop-in-delay *,
-.animate-drop-in-delay[data-sectionstate=inactive] * {
+.animal-icons *,
+.animal-icons[data-sectionstate=inactive] * {
   transition: all 1s ease-out;
   opacity: 0;
   transform: translate(0, -20px);
 }
-.animate-drop-in-delay *:nth-child(1),
-.animate-drop-in-delay[data-sectionstate=inactive] *:nth-child(1) {
-  transition-delay: 0.7s;
+.animal-icons *:nth-child(1),
+.animal-icons[data-sectionstate=inactive] *:nth-child(1) {
+  transition-delay: 2.5s;
 }
-.animate-drop-in-delay *:nth-child(2),
-.animate-drop-in-delay[data-sectionstate=inactive] *:nth-child(2) {
-  transition-delay: 1s;
+.animal-icons *:nth-child(2),
+.animal-icons[data-sectionstate=inactive] *:nth-child(2) {
+  transition-delay: 2.7s;
 }
-.animate-drop-in-delay *:nth-child(3),
-.animate-drop-in-delay[data-sectionstate=inactive] *:nth-child(3) {
-  transition-delay: 1.2s;
+.animal-icons *:nth-child(3),
+.animal-icons[data-sectionstate=inactive] *:nth-child(3) {
+  transition-delay: 3s;
 }
-.animate-drop-in-delay *:nth-child(4),
-.animate-drop-in-delay[data-sectionstate=inactive] *:nth-child(4) {
-  transition-delay: 1.5s;
+.animal-icons *:nth-child(4),
+.animal-icons[data-sectionstate=inactive] *:nth-child(4) {
+  transition-delay: 3.2s;
 }
-.animate-drop-in-delay *:nth-child(5),
-.animate-drop-in-delay[data-sectionstate=inactive] *:nth-child(5) {
-  transition-delay: 1.7s;
+.animal-icons *:nth-child(5),
+.animal-icons[data-sectionstate=inactive] *:nth-child(5) {
+  transition-delay: 3.5s;
 }
-.animate-drop-in-delay *:nth-child(6),
-.animate-drop-in-delay[data-sectionstate=inactive] *:nth-child(6) {
-  transition-delay: 2s;
+.animal-icons *:nth-child(6),
+.animal-icons[data-sectionstate=inactive] *:nth-child(6) {
+  transition-delay: 3.7s;
 }
 
-[data-sectionstate=active] .animate-drop-in-delay * {
+[data-sectionstate=active] .animal-icons * {
   opacity: 1;
   transform: translate(0, 0);
 }
@@ -1695,7 +1757,7 @@ section {
 .pawprints {
   position: absolute;
   top: -50vh;
-  z-index: -1;
+  z-index: 2;
 }
 .pawprints div {
   width: 50px;
@@ -1739,40 +1801,43 @@ section[data-sectionstate=active] .pawprints div {
   opacity: 0.3;
 }
 section[data-sectionstate=active] .pawprints div:nth-child(10) {
-  transition-delay: 0.5s;
-}
-section[data-sectionstate=active] .pawprints div:nth-child(9) {
   transition-delay: 1s;
 }
-section[data-sectionstate=active] .pawprints div:nth-child(8) {
-  transition-delay: 1.25s;
-}
-section[data-sectionstate=active] .pawprints div:nth-child(7) {
+section[data-sectionstate=active] .pawprints div:nth-child(9) {
   transition-delay: 1.5s;
 }
-section[data-sectionstate=active] .pawprints div:nth-child(6) {
-  transition-delay: 1.75s;
-}
-section[data-sectionstate=active] .pawprints div:nth-child(5) {
+section[data-sectionstate=active] .pawprints div:nth-child(8) {
   transition-delay: 2s;
 }
-section[data-sectionstate=active] .pawprints div:nth-child(4) {
-  transition-delay: 2.255s;
-}
-section[data-sectionstate=active] .pawprints div:nth-child(3) {
-  transition-delay: 2.4s;
-}
-section[data-sectionstate=active] .pawprints div:nth-child(2) {
+section[data-sectionstate=active] .pawprints div:nth-child(7) {
   transition-delay: 2.5s;
 }
+section[data-sectionstate=active] .pawprints div:nth-child(6) {
+  transition-delay: 3s;
+}
+section[data-sectionstate=active] .pawprints div:nth-child(5) {
+  transition-delay: 3.5s;
+}
+section[data-sectionstate=active] .pawprints div:nth-child(4) {
+  transition-delay: 4s;
+}
+section[data-sectionstate=active] .pawprints div:nth-child(3) {
+  transition-delay: 4.5s;
+}
+section[data-sectionstate=active] .pawprints div:nth-child(2) {
+  transition-delay: 5s;
+}
 section[data-sectionstate=active] .pawprints div:nth-child(1) {
-  transition-delay: 2.7s;
+  transition-delay: 5.5s;
 }
 
 .pawprints-2 {
   position: absolute;
-  z-index: -1;
+  z-index: 2;
+  width: 100%;
   top: -50vh;
+  right: 0;
+  overflow: hidden;
 }
 .pawprints-2 div {
   width: 50px;
@@ -1816,40 +1881,41 @@ section[data-sectionstate=active] .pawprints-2 div {
   opacity: 0.3;
 }
 section[data-sectionstate=active] .pawprints-2 div:nth-child(10) {
-  transition-delay: 0.5s;
-}
-section[data-sectionstate=active] .pawprints-2 div:nth-child(9) {
   transition-delay: 1s;
 }
-section[data-sectionstate=active] .pawprints-2 div:nth-child(8) {
-  transition-delay: 1.25s;
-}
-section[data-sectionstate=active] .pawprints-2 div:nth-child(7) {
+section[data-sectionstate=active] .pawprints-2 div:nth-child(9) {
   transition-delay: 1.5s;
 }
-section[data-sectionstate=active] .pawprints-2 div:nth-child(6) {
-  transition-delay: 1.75s;
-}
-section[data-sectionstate=active] .pawprints-2 div:nth-child(5) {
+section[data-sectionstate=active] .pawprints-2 div:nth-child(8) {
   transition-delay: 2s;
 }
-section[data-sectionstate=active] .pawprints-2 div:nth-child(4) {
-  transition-delay: 2.255s;
-}
-section[data-sectionstate=active] .pawprints-2 div:nth-child(3) {
-  transition-delay: 2.4s;
-}
-section[data-sectionstate=active] .pawprints-2 div:nth-child(2) {
+section[data-sectionstate=active] .pawprints-2 div:nth-child(7) {
   transition-delay: 2.5s;
 }
+section[data-sectionstate=active] .pawprints-2 div:nth-child(6) {
+  transition-delay: 3s;
+}
+section[data-sectionstate=active] .pawprints-2 div:nth-child(5) {
+  transition-delay: 3.5s;
+}
+section[data-sectionstate=active] .pawprints-2 div:nth-child(4) {
+  transition-delay: 4s;
+}
+section[data-sectionstate=active] .pawprints-2 div:nth-child(3) {
+  transition-delay: 4.5s;
+}
+section[data-sectionstate=active] .pawprints-2 div:nth-child(2) {
+  transition-delay: 5s;
+}
 section[data-sectionstate=active] .pawprints-2 div:nth-child(1) {
-  transition-delay: 2.7s;
+  transition-delay: 5.5s;
 }
 
 .pawprints-3 {
   position: absolute;
-  z-index: -1;
+  z-index: 2;
   top: -50vh;
+  right: 90vh;
 }
 .pawprints-3 div {
   width: 50px;
@@ -1902,49 +1968,53 @@ section[data-sectionstate=active] .pawprints-3 div {
   opacity: 0.3;
 }
 section[data-sectionstate=active] .pawprints-3 div:nth-child(13) {
-  transition-delay: 0.2s;
-}
-section[data-sectionstate=active] .pawprints-3 div:nth-child(12) {
-  transition-delay: 0.4s;
-}
-section[data-sectionstate=active] .pawprints-3 div:nth-child(11) {
-  transition-delay: 0.6s;
-}
-section[data-sectionstate=active] .pawprints-3 div:nth-child(10) {
-  transition-delay: 0.8s;
-}
-section[data-sectionstate=active] .pawprints-3 div:nth-child(9) {
   transition-delay: 1s;
 }
-section[data-sectionstate=active] .pawprints-3 div:nth-child(8) {
-  transition-delay: 1.2s;
+section[data-sectionstate=active] .pawprints-3 div:nth-child(12) {
+  transition-delay: 1.5s;
 }
-section[data-sectionstate=active] .pawprints-3 div:nth-child(7) {
-  transition-delay: 1.4s;
-}
-section[data-sectionstate=active] .pawprints-3 div:nth-child(6) {
-  transition-delay: 1.6s;
-}
-section[data-sectionstate=active] .pawprints-3 div:nth-child(5) {
-  transition-delay: 1.8s;
-}
-section[data-sectionstate=active] .pawprints-3 div:nth-child(4) {
+section[data-sectionstate=active] .pawprints-3 div:nth-child(11) {
   transition-delay: 2s;
 }
+section[data-sectionstate=active] .pawprints-3 div:nth-child(10) {
+  transition-delay: 2.5s;
+}
+section[data-sectionstate=active] .pawprints-3 div:nth-child(9) {
+  transition-delay: 3s;
+}
+section[data-sectionstate=active] .pawprints-3 div:nth-child(8) {
+  transition-delay: 3.5s;
+}
+section[data-sectionstate=active] .pawprints-3 div:nth-child(7) {
+  transition-delay: 4s;
+}
+section[data-sectionstate=active] .pawprints-3 div:nth-child(6) {
+  transition-delay: 4.5s;
+}
+section[data-sectionstate=active] .pawprints-3 div:nth-child(5) {
+  transition-delay: 5s;
+}
+section[data-sectionstate=active] .pawprints-3 div:nth-child(4) {
+  transition-delay: 5.5s;
+}
 section[data-sectionstate=active] .pawprints-3 div:nth-child(3) {
-  transition-delay: 2.2s;
+  transition-delay: 6s;
 }
 section[data-sectionstate=active] .pawprints-3 div:nth-child(2) {
-  transition-delay: 2.4s;
+  transition-delay: 6.5s;
 }
 section[data-sectionstate=active] .pawprints-3 div:nth-child(1) {
-  transition-delay: 2.6s;
+  transition-delay: 7s;
 }
 
 .pawprints-4 {
   position: absolute;
-  z-index: -1;
-  top: -50vh;
+  z-index: 2;
+  top: -40vh;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  width: 100%;
 }
 .pawprints-4 div {
   width: 50px;
@@ -1988,40 +2058,44 @@ section[data-sectionstate=active] .pawprints-4 div {
   opacity: 0.3;
 }
 section[data-sectionstate=active] .pawprints-4 div:nth-child(10) {
-  transition-delay: 0.5s;
-}
-section[data-sectionstate=active] .pawprints-4 div:nth-child(9) {
   transition-delay: 1s;
 }
-section[data-sectionstate=active] .pawprints-4 div:nth-child(8) {
-  transition-delay: 1.25s;
-}
-section[data-sectionstate=active] .pawprints-4 div:nth-child(7) {
+section[data-sectionstate=active] .pawprints-4 div:nth-child(9) {
   transition-delay: 1.5s;
 }
-section[data-sectionstate=active] .pawprints-4 div:nth-child(6) {
-  transition-delay: 1.75s;
-}
-section[data-sectionstate=active] .pawprints-4 div:nth-child(5) {
+section[data-sectionstate=active] .pawprints-4 div:nth-child(8) {
   transition-delay: 2s;
 }
-section[data-sectionstate=active] .pawprints-4 div:nth-child(4) {
-  transition-delay: 2.255s;
-}
-section[data-sectionstate=active] .pawprints-4 div:nth-child(3) {
-  transition-delay: 2.4s;
-}
-section[data-sectionstate=active] .pawprints-4 div:nth-child(2) {
+section[data-sectionstate=active] .pawprints-4 div:nth-child(7) {
   transition-delay: 2.5s;
 }
+section[data-sectionstate=active] .pawprints-4 div:nth-child(6) {
+  transition-delay: 3s;
+}
+section[data-sectionstate=active] .pawprints-4 div:nth-child(5) {
+  transition-delay: 3.5s;
+}
+section[data-sectionstate=active] .pawprints-4 div:nth-child(4) {
+  transition-delay: 4s;
+}
+section[data-sectionstate=active] .pawprints-4 div:nth-child(3) {
+  transition-delay: 4.5s;
+}
+section[data-sectionstate=active] .pawprints-4 div:nth-child(2) {
+  transition-delay: 5s;
+}
 section[data-sectionstate=active] .pawprints-4 div:nth-child(1) {
-  transition-delay: 2.7s;
+  transition-delay: 5.5s;
 }
 
 .pawprints-5 {
   position: absolute;
-  z-index: -1;
+  z-index: 2;
   top: -50vh;
+  bottom: 10vh;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
 }
 .pawprints-5 div {
   width: 50px;
@@ -2059,34 +2133,38 @@ section[data-sectionstate=active] .pawprints-5 div {
   opacity: 0.3;
 }
 section[data-sectionstate=active] .pawprints-5 div:nth-child(8) {
-  transition-delay: 5s;
+  transition-delay: 4.5s;
 }
 section[data-sectionstate=active] .pawprints-5 div:nth-child(7) {
-  transition-delay: 4.6s;
-}
-section[data-sectionstate=active] .pawprints-5 div:nth-child(6) {
   transition-delay: 4s;
 }
-section[data-sectionstate=active] .pawprints-5 div:nth-child(5) {
-  transition-delay: 3.2s;
+section[data-sectionstate=active] .pawprints-5 div:nth-child(6) {
+  transition-delay: 3.5s;
 }
-section[data-sectionstate=active] .pawprints-5 div:nth-child(4) {
+section[data-sectionstate=active] .pawprints-5 div:nth-child(5) {
   transition-delay: 3s;
 }
+section[data-sectionstate=active] .pawprints-5 div:nth-child(4) {
+  transition-delay: 2.5s;
+}
 section[data-sectionstate=active] .pawprints-5 div:nth-child(3) {
-  transition-delay: 2.6s;
+  transition-delay: 2s;
 }
 section[data-sectionstate=active] .pawprints-5 div:nth-child(2) {
-  transition-delay: 2.4s;
+  transition-delay: 1.5s;
 }
 section[data-sectionstate=active] .pawprints-5 div:nth-child(1) {
-  transition-delay: 0.25s;
+  transition-delay: 1s;
 }
 
 .pawprints-6 {
   position: absolute;
-  z-index: -1;
-  top: -50vh;
+  z-index: 2;
+  top: -40vh;
+  bottom: 5vh;
+  right: 0;
+  overflow: hidden;
+  width: 75%;
 }
 .pawprints-6 div {
   width: 50px;
@@ -2096,121 +2174,102 @@ section[data-sectionstate=active] .pawprints-5 div:nth-child(1) {
   opacity: 0;
 }
 .pawprints-6 div:nth-child(1) {
-  transform: translate(1100px, 700px) rotate(240deg);
+  transform: translate(800px, 700px) rotate(240deg);
 }
 .pawprints-6 div:nth-child(2) {
-  transform: translate(1100px, 770px) rotate(250deg);
+  transform: translate(800px, 520px) rotate(250deg);
 }
 .pawprints-6 div:nth-child(3) {
-  transform: translate(960px, 790px) rotate(200deg);
+  transform: translate(690px, 540px) rotate(200deg);
 }
 .pawprints-6 div:nth-child(4) {
-  transform: translate(870px, 600px) rotate(250deg);
+  transform: translate(660px, 590px) rotate(250deg);
 }
 .pawprints-6 div:nth-child(5) {
-  transform: translate(680px, 520px) rotate(310deg);
+  transform: translate(480px, 500px) rotate(310deg);
 }
 .pawprints-6 div:nth-child(6) {
-  transform: translate(720px, 580px) rotate(300deg);
+  transform: translate(510px, 570px) rotate(210deg);
 }
 .pawprints-6 div:nth-child(7) {
-  transform: translate(560px, 580px) rotate(230deg);
+  transform: translate(320px, 380px) rotate(300deg);
 }
 .pawprints-6 div:nth-child(8) {
-  transform: translate(530px, 400px) rotate(220deg);
+  transform: translate(300px, 420px) rotate(305deg);
 }
 .pawprints-6 div:nth-child(9) {
-  transform: translate(400px, 520px) rotate(190deg);
+  transform: translate(150px, 320px) rotate(250deg);
 }
 .pawprints-6 div:nth-child(10) {
-  transform: translate(520px, 550px) rotate(170deg);
+  transform: translate(180px, 360px) rotate(210deg);
 }
 .pawprints-6 div:nth-child(11) {
-  transform: translate(460px, 580px) rotate(130deg);
+  transform: translate(40px, 340px) rotate(190deg);
 }
 .pawprints-6 div:nth-child(12) {
-  transform: translate(580px, 600px) rotate(120deg);
+  transform: translate(150px, 340px) rotate(170deg);
 }
 .pawprints-6 div:nth-child(13) {
-  transform: translate(740px, 500px) rotate(60deg);
+  transform: translate(45px, 380px) rotate(150deg);
 }
 .pawprints-6 div:nth-child(14) {
-  transform: translate(940px, 700px) rotate(160deg);
+  transform: translate(180px, 370px) rotate(130deg);
 }
 .pawprints-6 div:nth-child(15) {
-  transform: translate(820px, 700px) rotate(180deg);
-}
-.pawprints-6 div:nth-child(16) {
-  transform: translate(900px, 740px) rotate(130deg);
-}
-.pawprints-6 div:nth-child(17) {
-  transform: translate(1000px, 620px) rotate(90deg);
-}
-.pawprints-6 div:nth-child(18) {
-  transform: translate(1100px, 670px) rotate(80deg);
+  transform: translate(120px, 430px) rotate(130deg);
 }
 
 section[data-sectionstate=active] .pawprints-6 div {
   opacity: 0.3;
 }
-section[data-sectionstate=active] .pawprints-6 div:nth-child(18) {
-  transition-delay: 3.8s;
-}
-section[data-sectionstate=active] .pawprints-6 div:nth-child(17) {
-  transition-delay: 3.6s;
-}
-section[data-sectionstate=active] .pawprints-6 div:nth-child(16) {
-  transition-delay: 3.4s;
-}
 section[data-sectionstate=active] .pawprints-6 div:nth-child(15) {
-  transition-delay: 3.2s;
+  transition-delay: 8s;
 }
 section[data-sectionstate=active] .pawprints-6 div:nth-child(14) {
-  transition-delay: 3s;
+  transition-delay: 7.5s;
 }
 section[data-sectionstate=active] .pawprints-6 div:nth-child(13) {
-  transition-delay: 2.8s;
+  transition-delay: 7s;
 }
 section[data-sectionstate=active] .pawprints-6 div:nth-child(12) {
-  transition-delay: 2.6s;
+  transition-delay: 6.5s;
 }
 section[data-sectionstate=active] .pawprints-6 div:nth-child(11) {
-  transition-delay: 2.4s;
+  transition-delay: 6s;
 }
 section[data-sectionstate=active] .pawprints-6 div:nth-child(10) {
-  transition-delay: 2.2s;
+  transition-delay: 5.5s;
 }
 section[data-sectionstate=active] .pawprints-6 div:nth-child(9) {
-  transition-delay: 2s;
+  transition-delay: 5s;
 }
 section[data-sectionstate=active] .pawprints-6 div:nth-child(8) {
-  transition-delay: 1.8s;
+  transition-delay: 4.5s;
 }
 section[data-sectionstate=active] .pawprints-6 div:nth-child(7) {
-  transition-delay: 1.6s;
+  transition-delay: 4s;
 }
 section[data-sectionstate=active] .pawprints-6 div:nth-child(6) {
-  transition-delay: 1.4s;
+  transition-delay: 3.5s;
 }
 section[data-sectionstate=active] .pawprints-6 div:nth-child(5) {
-  transition-delay: 1.2s;
+  transition-delay: 3s;
 }
 section[data-sectionstate=active] .pawprints-6 div:nth-child(4) {
-  transition-delay: 1s;
+  transition-delay: 2.5s;
 }
 section[data-sectionstate=active] .pawprints-6 div:nth-child(3) {
-  transition-delay: 0.8s;
+  transition-delay: 2s;
 }
 section[data-sectionstate=active] .pawprints-6 div:nth-child(2) {
-  transition-delay: 0.5s;
+  transition-delay: 1.5s;
 }
 section[data-sectionstate=active] .pawprints-6 div:nth-child(1) {
-  transition-delay: 0.24s;
+  transition-delay: 1s;
 }
 
 .pawprints-7 {
   position: absolute;
-  z-index: -1;
   top: -50vh;
 }
 .pawprints-7 div {
@@ -2267,46 +2326,46 @@ section[data-sectionstate=active] .pawprints-7 div {
   opacity: 0.3;
 }
 section[data-sectionstate=active] .pawprints-7 div:nth-child(14) {
-  transition-delay: 0.5s;
-}
-section[data-sectionstate=active] .pawprints-7 div:nth-child(13) {
   transition-delay: 1s;
 }
-section[data-sectionstate=active] .pawprints-7 div:nth-child(12) {
-  transition-delay: 1.25s;
-}
-section[data-sectionstate=active] .pawprints-7 div:nth-child(11) {
+section[data-sectionstate=active] .pawprints-7 div:nth-child(13) {
   transition-delay: 1.5s;
 }
-section[data-sectionstate=active] .pawprints-7 div:nth-child(10) {
-  transition-delay: 1.7s;
-}
-section[data-sectionstate=active] .pawprints-7 div:nth-child(9) {
+section[data-sectionstate=active] .pawprints-7 div:nth-child(12) {
   transition-delay: 2s;
 }
-section[data-sectionstate=active] .pawprints-7 div:nth-child(8) {
-  transition-delay: 2.25s;
-}
-section[data-sectionstate=active] .pawprints-7 div:nth-child(7) {
+section[data-sectionstate=active] .pawprints-7 div:nth-child(11) {
   transition-delay: 2.5s;
 }
-section[data-sectionstate=active] .pawprints-7 div:nth-child(6) {
-  transition-delay: 2.75s;
-}
-section[data-sectionstate=active] .pawprints-7 div:nth-child(5) {
+section[data-sectionstate=active] .pawprints-7 div:nth-child(10) {
   transition-delay: 3s;
 }
-section[data-sectionstate=active] .pawprints-7 div:nth-child(4) {
-  transition-delay: 3.255s;
-}
-section[data-sectionstate=active] .pawprints-7 div:nth-child(3) {
-  transition-delay: 3.4s;
-}
-section[data-sectionstate=active] .pawprints-7 div:nth-child(2) {
+section[data-sectionstate=active] .pawprints-7 div:nth-child(9) {
   transition-delay: 3.5s;
 }
+section[data-sectionstate=active] .pawprints-7 div:nth-child(8) {
+  transition-delay: 4s;
+}
+section[data-sectionstate=active] .pawprints-7 div:nth-child(7) {
+  transition-delay: 4.5s;
+}
+section[data-sectionstate=active] .pawprints-7 div:nth-child(6) {
+  transition-delay: 5s;
+}
+section[data-sectionstate=active] .pawprints-7 div:nth-child(5) {
+  transition-delay: 5.5s;
+}
+section[data-sectionstate=active] .pawprints-7 div:nth-child(4) {
+  transition-delay: 6s;
+}
+section[data-sectionstate=active] .pawprints-7 div:nth-child(3) {
+  transition-delay: 6.5s;
+}
+section[data-sectionstate=active] .pawprints-7 div:nth-child(2) {
+  transition-delay: 7s;
+}
 section[data-sectionstate=active] .pawprints-7 div:nth-child(1) {
-  transition-delay: 3.7s;
+  transition-delay: 7.5s;
 }
 
 .animate-slide-up,

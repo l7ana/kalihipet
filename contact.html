@@ -25,6 +25,7 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="">Products</a></li>
                 <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
         <nav class="side-nav" data-navstate="closed">
@@ -35,9 +36,7 @@
                 <li>Account
                     <ul>
                         <li><a href="login.html">Log In / Sign Up</a></li>
-                        <li>My Pets</li>
-                        <li>My Orders</li>
-                        <li>Billing</li>
+                        <li>My Account</li>
                     </ul>
                 </li>
                 <li><a href="services.html"> Services
@@ -72,7 +71,7 @@
     </header>
     <main class="site-main">
 
-        <section id="contact-top" class="animate-on-scroll paws">
+        <section id="contact-top" class="animate-on-scroll">
             <div class="container">
                 <div class="row-grid">
                     <div class="column-grid col-start-1 col-end-6">
@@ -150,9 +149,11 @@
         <div class="container">
 
             <div class="footer-logo">
-                <img src="img/logos/KPC-square.png" alt="Logo / Home">
-                <img src="img/icons/fb.png" alt="facebook"><img src="img/icons/insta.png" alt="instagram">
-                <p> @kalihipetcenter</p>
+                <a href="index.html"><img src="img/logos/KPC-square.png" alt="Logo / Home"></a>
+                <a href="https://www.facebook.com/KalihiPetCenter/"><img src="img/icons/fb.png" alt="facebook">
+                    <span class="hide-visually">facebook</span></a>
+                <a href="https://www.instagram.com/kalihipetcenter/?hl=en"><img src="img/icons/insta.png"
+                        alt="instagram"><span class="hide-visually">instagram</span></a>
             </div>
             <div class="row-grid">
                 <div class="column-grid col-start-2 col-end-5">
@@ -198,12 +199,6 @@
             speed: 800,
             speedAsDuration: true
         });
-    </script>
-    <!-- rough.js -->
-    <script src="js/rough.min.js"></script>
-    <script>
-        const rc = rough.canvas(document.getElementById('canvas'));
-        rc.rectangle(10, 10, 200, 200); // x, y, width, height
     </script>
 
     <!-- Main JS -->
