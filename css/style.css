@@ -719,9 +719,9 @@ img {
   }
 
   #hamrun-updates {
-    max-width: 370px;
+    max-width: 340px;
     position: absolute;
-    left: 2%;
+    left: 5%;
     bottom: 15%;
     z-index: 1;
   }
@@ -1670,13 +1670,13 @@ section {
   transition-delay: 0.7s;
 }
 #contact-top .hero-fade-in:nth-child(3) {
-  transition-delay: 1s;
-}
-#contact-top .hero-fade-in:nth-child(4) {
   transition-delay: 1.2s;
 }
-#contact-top .hero-fade-in:nth-child(5) {
+#contact-top .hero-fade-in:nth-child(4) {
   transition-delay: 1.5s;
+}
+#contact-top .hero-fade-in:nth-child(5) {
+  transition-delay: 1.7s;
 }
 #contact-top[data-sectionstate=active] .hero-fade-in {
   opacity: 1;
