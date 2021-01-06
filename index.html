@@ -23,7 +23,6 @@
         <nav class="top-nav">
             <ul>
                 <li><a href="about.html">About</a></li>
-                <li><a href="">Products</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -143,7 +142,7 @@
                 </div>
                 <div class="row-grid">
                     <div class="column-grid col-start-1 col-end-5">
-                        <img src="img/ani/hamrun.gif" alt="hamster on wheel">
+                        <img src="img/ani/hamrun.gif" alt="hamster on wheel" id="hamrun">
                     </div>
                     <div class="column-grid col-start-7 col-end-12">
                         <h2 class="sectionhead slide-right">Create an Account to</h2>
@@ -239,8 +238,8 @@
                             <li><img class="icons" src="img/icons/phone.png" alt="phone"><a href="tel:">(808)
                                     841-5234</a>
                             </li>
-                            <li><img class="icons" src="img/icons/email.png" alt="email"></li> <a
-                                href="mailto:">kalihipetcenter@aol.com</a>
+                            <li><img class="icons" src="img/icons/email.png" alt="email"><a
+                                    href="mailto:">kalihipetcenter@aol.com</a></li>
                         </ul>
                     </div>
                     <div class="column-grid col-start-7 col-end-10">
@@ -271,10 +270,12 @@
 
             <div class="footer-logo">
                 <a href="index.html"><img src="img/logos/KPC-square.png" alt="Logo / Home"></a>
-                <a href="https://www.facebook.com/KalihiPetCenter/"><img src="img/icons/fb.png" alt="facebook">
-                    <span class="hide-visually">facebook</span></a>
-                <a href="https://www.instagram.com/kalihipetcenter/?hl=en"><img src="img/icons/insta.png"
-                        alt="instagram"><span class="hide-visually">instagram</span></a>
+                <div><a href="https://www.facebook.com/KalihiPetCenter/"><img src="img/icons/fb.png" alt="facebook">
+                        <span class="hide-visually">facebook</span></a>
+                    <a href="https://www.instagram.com/kalihipetcenter/?hl=en"><img src="img/icons/insta.png"
+                            alt="instagram"><span class="hide-visually">instagram</span></a>
+                </div>
+
             </div>
             <div class="row-grid">
                 <div class="column-grid col-start-2 col-end-5">
@@ -289,6 +290,9 @@
                         <li><img class="icons" src="img/icons/email.png" alt="email"><a
                                 href="mailto:">kalihipetcenter@aol.com</a></li>
                     </ul>
+                </div>
+                <div class="column-grid col-start-6 col-end-6">
+
                 </div>
                 <nav class="footer-nav column-grid col-start-7 col-end-8">
                     <ul>
@@ -320,12 +324,6 @@
             speed: 800,
             speedAsDuration: true
         });
-    </script>
-    <!-- rough.js -->
-    <script src="js/rough.min.js"></script>
-    <script>
-        const rc = rough.canvas(document.getElementById('canvas'));
-        rc.rectangle(10, 10, 200, 200); // x, y, width, height
     </script>
 
     <!-- Main JS -->

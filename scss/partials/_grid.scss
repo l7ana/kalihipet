@@ -54,6 +54,24 @@
     }
 }
 
+.site-footer .row-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-auto-flow: row;
+    .col-start-2 {
+        // background-color: blue;
+        width: fit-content;
+    }
+}
+
+@media (min-width: $breakpoint-small) {
+    .site-footer .row-grid {
+        grid-template-columns: repeat(12, 1fr);
+        display: grid;
+        column-gap: 1.45%;
+    }
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;

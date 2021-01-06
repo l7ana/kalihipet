@@ -32,8 +32,6 @@
     }
 }
 
-// .site-main {overflow-x: hidden;}
-
 .site-footer {
     background-color: $yellow-lter;
     padding: 2em 0 1em 0;
@@ -82,7 +80,7 @@ section {
 }
 
 #shop-panel {
-    padding: 1em 0 2em 0;
+    padding: 1em 0 1em 0;
     background-image: url(../img/blocks/section1-top.svg);
     background-repeat: no-repeat;
     background-size: 100% auto;
@@ -90,6 +88,9 @@ section {
     place-items: center;
     background-color: $blue-lt;
     .container {z-index: 5;}
+    @media (min-width: $breakpoint-large) {
+        padding: 1em 0 3em 0;
+    }
 }
 
 #services-top {
@@ -105,6 +106,9 @@ section {
     z-index: 4;
     .column-grid {
         z-index: 4;
+    }
+    .col-end-5 {
+        margin-bottom: 0;
     }
 }
 

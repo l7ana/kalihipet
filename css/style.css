@@ -356,7 +356,10 @@ label {
   list-style: none;
   margin: 0;
   padding: 0;
-  padding-bottom: 1em;
+}
+.site-footer .footer-nav.column-grid {
+  margin: 0;
+  padding: 0;
 }
 .site-footer .footer-nav a {
   color: #0488A6;
@@ -451,7 +454,7 @@ input[type=submit].alt:hover, a.button.alt:hover {
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  margin-bottom: 5em;
+  margin-bottom: 1em;
   cursor: pointer;
 }
 .animal-icons .icon-hover {
@@ -517,7 +520,7 @@ img {
 #mango {
   position: absolute;
   max-width: 75%;
-  top: -20%;
+  top: -7%;
   left: 46%;
   bottom: 100%;
   transform: rotate(2deg);
@@ -607,6 +610,11 @@ img {
   top: 30%;
 }
 
+.footer-logo {
+  margin-top: -150px;
+  padding-bottom: 30px;
+}
+
 @media (min-width: 769px) {
   #mango {
     position: absolute;
@@ -662,6 +670,10 @@ img {
     max-width: 400px;
     z-index: 4;
   }
+
+  #hamrun {
+    margin: 0;
+  }
 }
 @media (min-width: 1250px) {
   #hero-gif {
@@ -691,6 +703,7 @@ img {
     display: inline-block;
     position: absolute;
     max-width: 130px;
+    margin-top: 0;
     left: calc(4% - 130px);
     text-align: center;
   }
@@ -885,6 +898,24 @@ body {
     margin-top: 20%;
   }
 }
+.site-footer .row-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-auto-flow: row;
+}
+.site-footer .row-grid .col-start-2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+@media (min-width: 768px) {
+  .site-footer .row-grid {
+    grid-template-columns: repeat(12, 1fr);
+    display: grid;
+    column-gap: 1.45%;
+  }
+}
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -1019,7 +1050,7 @@ section {
 }
 
 #shop-panel {
-  padding: 1em 0 2em 0;
+  padding: 1em 0 1em 0;
   background-image: url(../img/blocks/section1-top.svg);
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -1029,6 +1060,11 @@ section {
 }
 #shop-panel .container {
   z-index: 5;
+}
+@media (min-width: 1250px) {
+  #shop-panel {
+    padding: 1em 0 3em 0;
+  }
 }
 
 #services-top {
@@ -1047,6 +1083,9 @@ section {
 }
 #section1 .column-grid {
   z-index: 4;
+}
+#section1 .col-end-5 {
+  margin-bottom: 0;
 }
 
 #section2 {
