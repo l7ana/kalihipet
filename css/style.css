@@ -334,6 +334,31 @@ label {
   color: #0488A6;
 }
 
+@media (max-width: 481px) {
+  .top-nav.hide-on-x-small {
+    display: none;
+  }
+}
+@media (max-width: 481px) {
+  .site-identity.logo .hide-on-x-small {
+    display: none;
+  }
+  .site-identity.logo .hide-on-large img {
+    max-width: 70px;
+    position: fixed;
+    top: 2%;
+    left: 2%;
+  }
+}
+@media (min-width: 480px) {
+  .site-identity.logo .hide-on-large {
+    display: none;
+  }
+  .site-identity.logo .hide-on-x-small {
+    max-width: 250px;
+  }
+}
+
 @media (min-width: 1250px) {
   .footer-nav ul {
     list-style: none;
@@ -905,7 +930,6 @@ body {
 }
 .site-footer .row-grid .col-start-2 {
   width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
 }
 
