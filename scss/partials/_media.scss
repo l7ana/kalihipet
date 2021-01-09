@@ -60,14 +60,6 @@ img {
     z-index: 1;
 }
 
-#about-gif {
-    max-width: 250px;
-    position: absolute;
-    left: 50%;
-    bottom: 10%;
-    z-index: 6;
-}
-
 #hamrun-updates {
     max-width: 175px;
     position: absolute;
@@ -107,46 +99,6 @@ img {
     margin-top: -150px;
     padding-bottom: 30px;
 }
-// Contact Page
-.contact-wrapper {
-    // overflow-x: hidden;
-    position: relative;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    // border: 1px red solid;
-}
-
-#contact-tiel {
-    z-index: 4;
-    position: absolute;
-    @media (max-width: $breakpoint-x-small + 1px) {
-        max-width: 200px;
-        top: 45%;
-        right: 10%;
-    }
-    @media (max-width: $breakpoint-small - 1px) {
-        max-width: 270px;
-        top: 40%;
-        right: 10%;
-    }
-    @media (min-width: $breakpoint-small) {
-        max-width: 400px;
-        top: -25%;
-        left: 2%;
-    }
-    @media (min-width: $breakpoint-medium) {
-        max-width: 440px;
-        top: -30%;
-        left: 7%;
-    }
-    @media (min-width: $breakpoint-large) {
-        max-width: 455px;
-        top: -30%;
-        left: 16%;
-    }
-}
 
 @media (min-width: $breakpoint-small + 1px) {
     #mango {
@@ -163,13 +115,6 @@ img {
         left: 60%;
         bottom: 10%;
         z-index: 1;
-    }
-    #about-gif {
-        max-width: 250px;
-        position: absolute;
-        left: 75%;
-        bottom: 20%;
-        z-index: 5;
     }
     #hamrun-updates {
         max-width: 25%;
@@ -203,13 +148,6 @@ img {
         left: 65%;
         bottom: 10%;
         z-index: 1;
-    }
-    #about-gif {
-        max-width: 430px;
-        position: absolute;
-        left: 70%;
-        bottom: 5%;
-        z-index: 5;
     }
     .map {
         position: relative;
@@ -253,6 +191,90 @@ img {
         left: 50%;
         top: 30%;
         max-width: 600px;
+    }
+}
+
+// About Page
+#about-gif {
+    position: absolute;
+    z-index: 6;
+    @media (max-width: $breakpoint-x-small + 1px) {
+        max-width: 250px;
+        left: 50%;
+        bottom: 10%;
+    }
+    @media (max-width: $breakpoint-small - 1px) {
+        max-width: 300px;
+        right: 2%;
+        bottom: -5%;
+    }
+    @media (min-width: $breakpoint-small) {
+        max-width: 330px;
+        right: 2%;
+        bottom: 2%;
+    }
+    @media (min-width: $breakpoint-medium) {
+        max-width: 350px;
+        right: 2%;
+        bottom: 2%;
+    }
+    @media (min-width: $breakpoint-large) {
+        max-width: 430px;
+        left: 70%;
+        bottom: 5%;
+    }
+}
+#frankie {
+    @media (max-width: $breakpoint-x-small) {
+        width: 160px;
+    }
+    @media (max-width: $breakpoint-small - 1px) {
+        width: 180px;
+    }
+    @media (min-width: $breakpoint-small) {
+        width: 250px;
+    }
+}
+
+
+// Contact Page
+.contact-wrapper {
+    // overflow-x: hidden;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    // border: 1px red solid;
+}
+
+#contact-tiel {
+    z-index: 4;
+    position: absolute;
+    @media (max-width: $breakpoint-x-small + 1px) {
+        max-width: 200px;
+        top: 45%;
+        right: 10%;
+    }
+    @media (max-width: $breakpoint-small - 1px) {
+        max-width: 270px;
+        top: 40%;
+        right: 10%;
+    }
+    @media (min-width: $breakpoint-small) {
+        max-width: 400px;
+        top: -25%;
+        left: 2%;
+    }
+    @media (min-width: $breakpoint-medium) {
+        max-width: 440px;
+        top: -30%;
+        left: 7%;
+    }
+    @media (min-width: $breakpoint-large) {
+        max-width: 455px;
+        top: -30%;
+        left: 16%;
     }
 }
 
