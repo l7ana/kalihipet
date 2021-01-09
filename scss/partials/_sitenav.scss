@@ -128,27 +128,12 @@
     } 
 }
 
-@media (max-width:$breakpoint-x-small + 1) {
-    .top-nav.hide-on-x-small {display: none;}
-}
-
-.site-identity.logo {
-    // Mobile
+.site-identity.logo img {
     @media (max-width:$breakpoint-x-small + 1) {
-        .hide-on-x-small {display: none;}
-        .hide-on-large img {
             max-width: 70px;
             position: fixed;
             top: 2%;
             left: 2%;
-        }
-    }
-    // Large
-    @media (min-width:$breakpoint-x-small) {
-        .hide-on-large {display: none;}
-        .hide-on-x-small {
-            max-width: 250px;
-        }
     }
 }
 

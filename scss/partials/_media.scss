@@ -96,7 +96,18 @@ img {
     // border: 1px solid red;
 }
 
-// CONTACT
+#kitty-bunny {
+    position: absolute;
+    left: 50%;
+    max-width: 200px;
+    top: 30%;
+}
+
+.footer-logo {
+    margin-top: -150px;
+    padding-bottom: 30px;
+}
+// Contact Page
 .contact-wrapper {
     // overflow-x: hidden;
     position: relative;
@@ -108,23 +119,33 @@ img {
 }
 
 #contact-tiel {
-    position: absolute;
-    max-width: 200px;
-    top: -80%;
-    left: 40%;
     z-index: 4;
-}
-
-#kitty-bunny {
     position: absolute;
-    left: 50%;
-    max-width: 200px;
-    top: 30%;
-}
-
-.footer-logo {
-    margin-top: -150px;
-    padding-bottom: 30px;
+    @media (max-width: $breakpoint-x-small + 1px) {
+        max-width: 200px;
+        top: 45%;
+        right: 10%;
+    }
+    @media (max-width: $breakpoint-small - 1px) {
+        max-width: 270px;
+        top: 40%;
+        right: 10%;
+    }
+    @media (min-width: $breakpoint-small) {
+        max-width: 400px;
+        top: -25%;
+        left: 2%;
+    }
+    @media (min-width: $breakpoint-medium) {
+        max-width: 440px;
+        top: -30%;
+        left: 7%;
+    }
+    @media (min-width: $breakpoint-large) {
+        max-width: 455px;
+        top: -30%;
+        left: 16%;
+    }
 }
 
 @media (min-width: $breakpoint-small + 1px) {
@@ -161,13 +182,6 @@ img {
         max-width: 25%;
        top: 25%;
        left: 77%;     
-    }
-    #contact-tiel {
-        position: absolute;
-        max-width: 400px;
-        top: -30%;
-        left: 7%;
-        z-index: 4;
     }
     #kitty-bunny {
         position: absolute;
@@ -234,12 +248,6 @@ img {
         bottom: 15%;
         z-index: 1;
     }  
-    #contact-tiel {
-        position: absolute;
-        max-width: 455px;
-        top: -30%;
-        left: 15%;
-    }
     #kitty-bunny {
         position: absolute;
         left: 50%;

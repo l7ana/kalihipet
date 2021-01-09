@@ -1,15 +1,5 @@
 * {box-sizing: border-box;}
 
-/* 
-MEDIA QUERIES (Mobile First)
-    #DEFAULT/Mobile
-    #SMALL/Mobile+ - (max-width: 767px)
-    #MEDIUM/Tablet - (min-width:768px)
-    #LARGE/Desktop - (min-width: 1050px)
-    #EXTRALARGE/Desktop+ - (min-width: 1250px)
-
-*/
-
 /* LAYOUT */
 
 body {
@@ -32,4 +22,24 @@ body { font-size: 87.5%; }
 
 @media (min-width: $breakpoint-large) {
     body { font-size: 112.5%;  }  
+}
+
+// Hide on Mobile 
+@media (max-width: $breakpoint-x-small + 1px) {
+    .hide-on-x-small {visibility: hidden;}
+}
+
+// Show on Mobile
+@media (min-width: $breakpoint-x-small) {
+    .show-on-x-small {display: none;}
+}
+
+// Hide on Small
+@media (max-width: $breakpoint-small - 1px) {
+    .hide-on-small {visibility: hidden;}
+}
+
+// Show on Small
+@media (min-width: $breakpoint-small) {
+    .show-on-small {display: none;}
 }
