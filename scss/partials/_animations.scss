@@ -304,18 +304,6 @@
 }
 
 #services-top {
-  .sectionhead {
-    transition: all .5s ease-out;
-    transition-delay: .7s;
-    opacity: 0;
-    transform: translate(0px,20px);
-  }
-  h4 {
-    transition: all .5s ease-out;
-    transition-delay: .5s;
-    opacity: 0;
-    transform: translate(-10px,0px);
-  }
   img {
     transition: all .7s ease-out;
     transition-delay: 1.7s;
@@ -327,7 +315,7 @@
   .col-start-1 {
     .sectionhead {
       transition: all .5s ease-out;
-      transition-delay: 1s;
+      transition-delay: .7s;
       opacity: 0;
       transform: translate(0px,20px);
     }

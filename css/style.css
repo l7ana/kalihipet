@@ -571,25 +571,6 @@ img {
   margin: 1em 0;
 }
 
-#koda {
-  float: right;
-  width: 50%;
-  max-width: 200px;
-  z-index: 4;
-}
-
-.koda-wrapper {
-  position: relative;
-}
-.koda-wrapper::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.koda-wrapper p {
-  max-width: 50%;
-}
-
 #kitty-bunny {
   position: absolute;
   left: 50%;
@@ -680,15 +661,6 @@ img {
     top: -160px;
   }
 
-  #koda {
-    display: block;
-    position: absolute;
-    width: 100%;
-    max-width: none;
-    top: -15%;
-    right: -50%;
-  }
-
   #hamrun-updates {
     max-width: 340px;
     position: absolute;
@@ -760,6 +732,59 @@ img {
   }
 }
 
+#koda {
+  float: right;
+  display: block;
+  width: 50%;
+  max-width: 200px;
+  z-index: 4;
+}
+
+.koda-wrapper {
+  position: relative;
+}
+.koda-wrapper::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.koda-wrapper p {
+  max-width: 50%;
+}
+
+@media (min-width: 768px) {
+  .koda-wrapper p {
+    max-width: 100%;
+  }
+
+  #koda {
+    float: none;
+    width: 80%;
+  }
+}
+@media (min-width: 900px) {
+  .koda-wrapper p {
+    max-width: 40%;
+  }
+
+  #koda {
+    float: right;
+    width: 60%;
+  }
+}
+@media (min-width: 1250px) {
+  .koda-wrapper p {
+    max-width: 50%;
+  }
+
+  #koda {
+    position: absolute;
+    width: 100%;
+    max-width: none;
+    top: -15%;
+    right: -50%;
+  }
+}
 .contact-wrapper {
   position: relative;
   height: 100%;
@@ -1163,7 +1188,7 @@ section {
 }
 
 #services-top {
-  padding: 5em 0;
+  padding: 5em 0 0 0;
   background-image: url(../img/blocks/YellowPath211.svg);
   background-repeat: no-repeat;
   overflow-x: hidden;
@@ -1574,18 +1599,6 @@ section {
   transform: translate(0px, 0px);
 }
 
-#services-top .sectionhead {
-  transition: all 0.5s ease-out;
-  transition-delay: 0.7s;
-  opacity: 0;
-  transform: translate(0px, 20px);
-}
-#services-top h4 {
-  transition: all 0.5s ease-out;
-  transition-delay: 0.5s;
-  opacity: 0;
-  transform: translate(-10px, 0px);
-}
 #services-top img {
   transition: all 0.7s ease-out;
   transition-delay: 1.7s;
@@ -1595,7 +1608,7 @@ section {
 }
 #services-top .col-start-1 .sectionhead {
   transition: all 0.5s ease-out;
-  transition-delay: 1s;
+  transition-delay: 0.7s;
   opacity: 0;
   transform: translate(0px, 20px);
 }

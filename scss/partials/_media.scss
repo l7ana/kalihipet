@@ -70,28 +70,6 @@ img {
 
 .map {margin: 1em 0;}
 
-#koda {
-    // display: block;
-    // position: absolute;
-    float: right;
-    width: 50%;
-    max-width: 200px;
-   z-index: 4;
-//    border: 1px solid red;
-}
-
-.koda-wrapper {
-    position: relative;
-    &::after {
-       content: "";
-       display: table;
-       clear: both; 
-    }
-    p {
-        max-width: 50%;
-    }
-}
-
 #kitty-bunny {
     position: absolute;
     left: 50%;
@@ -127,11 +105,6 @@ img {
         bottom: 25%;
         z-index: 1;
     }
-    // #koda {
-    //     max-width: 25%;
-    //    top: 25%;
-    //    left: 77%;     
-    // }
     #kitty-bunny {
         position: absolute;
         left: 50%;
@@ -175,15 +148,6 @@ img {
     }
     .mango-wrapper {
         top: -160px;
-    }
-    #koda {
-        display: block;
-        position: absolute;
-        width: 100%;
-        max-width: none;
-       top: -15%;
-       right: -50%;
-    //    left: 70%;
     }
     #hamrun-updates {
         max-width: 340px;
@@ -239,6 +203,64 @@ img {
     }
     @media (min-width: $breakpoint-small) {
         width: 250px;
+    }
+}
+
+// Services Page
+#koda {
+    float: right;
+    display: block;
+    width: 50%;
+    max-width: 200px;
+    z-index: 4;
+}
+
+.koda-wrapper {
+    position: relative;
+    &::after {
+       content: "";
+       display: table;
+       clear: both; 
+    }
+    p {
+        max-width: 50%;
+    }
+}
+
+@media (min-width: $breakpoint-small) {
+    .koda-wrapper {
+        p {
+          max-width: 100%;  
+        }
+    }
+    #koda {
+        float: none;
+        width: 80%; 
+    }
+}
+@media (min-width: $breakpoint-medium - 150px) {
+    .koda-wrapper {
+        p {
+          max-width: 40%;  
+        }
+    }
+    #koda {
+        float: right;
+        width: 60%;    
+    }
+}
+@media (min-width: $breakpoint-large) {
+    .koda-wrapper {
+        p {
+          max-width: 50%;  
+        }
+    }
+    #koda {
+        position: absolute;
+        width: 100%;
+        max-width: none;
+       top: -15%;
+       right: -50%;
     }
 }
 
