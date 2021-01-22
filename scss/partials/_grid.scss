@@ -89,18 +89,14 @@
 
 // About Section 4
 #section4 .row-grid {
-    grid-template-columns: repeat(12, 1fr);
-    display: grid;
-    column-gap: 1.45%;
     @media (max-width: $breakpoint-small - 1px) {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        .col-start-1 {
-            max-width: 120px;
-        }
     }
 }
+
+// Row and Columns
 
 .row {
     display: flex;

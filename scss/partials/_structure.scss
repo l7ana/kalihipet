@@ -158,24 +158,14 @@ section {
     position: relative;
 }
 
-#contact-top {
+#contact {
     background-image: url(../img/blocks/contact-top.svg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 1600px;
     display: grid;
     place-items: center;
     padding-top: 5em;
     // background-color:$blue-lt;
-    margin: 0;
-    .column-grid {z-index: 4;}
-}
-
-#contact-bottom {
-    // background-image: url(../img/blocks/contact-top.svg);
-    background-repeat: no-repeat;
-    display: grid;
-    place-items: center;
-    padding: 0;
     margin: 0;
     .column-grid {z-index: 4;}
 }
