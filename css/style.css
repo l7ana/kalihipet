@@ -1060,6 +1060,9 @@ body {
   .row-grid > .column-grid.shift-up {
     margin-top: -20%;
   }
+  .row-grid > .column-grid.shift-up-sm {
+    margin-top: -10%;
+  }
   .row-grid > .column-grid.shift-up-med {
     margin-top: -50%;
   }
@@ -1225,6 +1228,24 @@ section {
   background-size: cover;
   display: grid;
   place-items: center;
+}
+
+#shop {
+  padding: 5em 0 0 0;
+  background-image: url(../img/blocks/hero-top.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+}
+
+#visit {
+  background-image: url(../img/blocks/section1-top.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #EFFAF9;
+  display: grid;
+  place-items: center;
+  margin-top: -3em;
 }
 
 #about-top {

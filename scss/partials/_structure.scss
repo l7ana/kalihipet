@@ -63,6 +63,24 @@ section {
     place-items: center;
 }
 
+#shop {
+    padding: 5em 0 0 0;
+    background-image: url(../img/blocks/hero-top.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+}
+
+#visit {
+    background-image: url(../img/blocks/section1-top.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $blue-lt;
+    display: grid;
+    place-items: center;
+    margin-top: -3em;
+}
+
 #about-top {
     padding: 5em 0;
     background-image: url(../img/blocks/about-top.svg);
