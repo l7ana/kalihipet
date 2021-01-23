@@ -68,7 +68,6 @@ section {
     background-image: url(../img/blocks/hero-top.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    display: grid;
 }
 
 #visit {
@@ -77,7 +76,6 @@ section {
     background-size: cover;
     background-color: $blue-lt;
     display: grid;
-    place-items: center;
     margin-top: -3em;
 }
 
