@@ -640,6 +640,64 @@
 }
 }
 
+#shop {
+  .col-start-8 {
+    transition: all .5s ease-out;
+    opacity: 0;
+    transition-delay: .8s;
+    transform: translate(30px,0px)scale(.9);
+    transform-origin: right center;
+  }
+
+  &[data-sectionstate="active"] {
+    .col-start-8 {
+      opacity: 1;
+      transform: translate(0,0px)scale(1);
+    }
+  }
+}
+
+#visit {
+  .col-start-1 {
+    transition: all .5s ease-out;
+    transition-delay: 1.2s;
+    transform: translate(-30px, 0px);
+    opacity: 0; 
+  }
+  .col-start-9 {
+    a, ul {
+      transition: all .5s ease-out;
+      transition-delay: 1.4s;
+      transform: translate(0px, -10px);
+      opacity: 0; 
+    }
+    ul {
+      transition: all .5s ease-out;
+      transition-delay: 1.5s;
+      transform: translate(0px, -10px);
+      opacity: 0; 
+    }
+    form {
+      transition: all .5s ease-out;
+      transition-delay: 1.7s;
+      transform: translate(-20px, 0px);
+      opacity: 0; 
+    }
+  }
+
+  &[data-sectionstate="active"] {
+    .col-start-1 {
+      transform: translate(0px, 0px);
+      opacity: 1; 
+    }
+    .col-start-9 {
+      a, ul, form {transform: translate(0px, 0px);
+      opacity: 1; }
+      
+    }
+  }
+}
+
 // PawPrints
 .animate-on-scroll.paws {
     position: relative;
@@ -693,7 +751,7 @@
 
   section[data-sectionstate="active"] .pawprints {
     div {
-      opacity: .3;
+      opacity: 1;
     }
     div:nth-child(10) { transition-delay: $pawprint-delay; }
     div:nth-child(9) { transition-delay: $pawprint-delay + $pawprint-increment; }
@@ -757,7 +815,7 @@
 
   section[data-sectionstate="active"] .pawprints-2 {
     div {
-      opacity: .3;
+      opacity: 1;
     }
     div:nth-child(10) { transition-delay: $pawprint-delay; }
     div:nth-child(9) { transition-delay: $pawprint-delay + $pawprint-increment; }
@@ -830,7 +888,7 @@
 
   section[data-sectionstate="active"] .pawprints-3 {
     div {
-      opacity: .3;
+      opacity: 1;
     }
     div:nth-child(13) { transition-delay: $pawprint-delay + ($pawprint-increment * 0); }
     div:nth-child(12) { transition-delay: $pawprint-delay + ($pawprint-increment * 1); }
@@ -899,7 +957,7 @@
 
   section[data-sectionstate="active"] .pawprints-4 {
     div {
-      opacity: .3;
+      opacity: 1;
     }
     div:nth-child(10) { transition-delay: $pawprint-delay + ($pawprint-increment * 0); }
     div:nth-child(9) { transition-delay: $pawprint-delay + ($pawprint-increment * 1);}
@@ -958,7 +1016,7 @@
   }
   section[data-sectionstate="active"] .pawprints-5 {
     div {
-      opacity: .3;
+      opacity: 1;
     }
     div:nth-child(8) { transition-delay: $pawprint-delay + ($pawprint-increment * 7); }
     div:nth-child(7) { transition-delay: $pawprint-delay + ($pawprint-increment * 6); }
@@ -1038,7 +1096,7 @@
 
   section[data-sectionstate="active"] .pawprints-6 {
     div {
-      opacity: .3;
+      opacity: 1;
     }
     div:nth-child(15) { transition-delay: $pawprint-delay + ($pawprint-increment * 14); }
     div:nth-child(14) { transition-delay: $pawprint-delay + ($pawprint-increment * 13); }
@@ -1116,7 +1174,7 @@
 
   section[data-sectionstate="active"] .pawprints-7 {
     div {
-      opacity: .3;
+      opacity: 1;
     }
     div:nth-child(14) { transition-delay: $pawprint-delay + ($pawprint-increment * 0); }
     div:nth-child(13) { transition-delay: $pawprint-delay + ($pawprint-increment * 1); }

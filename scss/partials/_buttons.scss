@@ -95,22 +95,22 @@ input[type=submit].alt, a.button.alt {
             font-size: 75%;
             color: $pink;
             transition: all .2s ease-out;
-            transform: translate(0px,0px);
+            transform: translate(0px,-5px);
             opacity: 0;
         }
         img {
             transition: all .2s ease-out;
-            transform: scale(1);
+            transform: scale(.9);
             transform-origin: top center;
         }
     }
     .icon-hover:hover {
         p {
             opacity: 1;
-            transform: translate(0,10px);
+            transform: translate(0,2px);
         }
         img {
-            transform: scale(1.2);
+            transform: scale(1);
         }
     }
 } 
