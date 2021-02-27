@@ -20,6 +20,7 @@
             height: 1.25em;
             transform: rotate(0deg);
             transition: .2s all ease-out;
+            font-family: $type-heading;
             }
     }
     svg {fill:$blue-lt;}
@@ -155,6 +156,7 @@
 }
 
 .site-footer {
+    // z-index: ;
     ul {
         padding-bottom: 1em;
     }

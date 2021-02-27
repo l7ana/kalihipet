@@ -259,6 +259,7 @@ label {
   height: 1.25em;
   transform: rotate(0deg);
   transition: 0.2s all ease-out;
+  font-family: "aesthet-nova", serif;
 }
 .site-header .side-nav svg {
   fill: #EFFAF9;
@@ -1087,6 +1088,7 @@ body {
 }
 .site-footer .row-grid .col-start-2 {
   width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
 }
 
